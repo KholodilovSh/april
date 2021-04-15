@@ -1,0 +1,43 @@
+/* Global */
+html {
+  scroll-behavior: smooth;
+
+  // Footer
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  overflow-x: hidden;
+  min-width: $min-width;
+
+  // Footer
+  @media (min-width: $tablet-width) {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+}
+
+.body--overflow-hidden {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

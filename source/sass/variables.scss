@@ -1,0 +1,27 @@
+// Полупрозрачные цвета
+$grey-border: rgba(98, 105, 98, 0.2); // #626962
+$grey-letter: rgba(27, 45, 55, 0.5); // #1B2D37;
+$light-blue-background: rgba(255, 255, 255, 0.1);
+
+$black-background: #1b2d37;
+
+$grey: #788891;
+$grey-background: #fafafa;
+$grey-cross: #c4c4c4;
+$light-blue: #00b2ff;
+
+// стандартные цвета
+$white: #ffffff;
+$black: #000000;
+$grey: #666666;
+$main-ground: #1b2931;
+
+// Реальные брейкпойнты
+$tablet-width: 768px;
+$mobile-width-only: ($tablet-width - 1px);
+$desktop-width: 1024px;
+$tablet-width-only: ($desktop-width - 1px);
+
+// Лимиты изменений
+$max-width: 1417px;
+$min-width: 320px;

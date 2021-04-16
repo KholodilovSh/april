@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HtmlAcademy, Accelerator, Site 'Jewellery'">
+  <title>All Jewellery</title>
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="">
+</head>
+
+<body>
+  <header class="main-header">
+    <h1 class="visually-hidden">All Jewellery</h1>
+    <div class="main-header__wrap container container--air">
+      <div class="main-header__seek">
+        <label for="seek" class="visually-hidden">строка поиска</label>
+        <input type="text" name="seek" id="seek" placeholder="Type here to search">
+      </div>
+      <a>
+        <!-- 1х: 38px; 2x: 76px -->
+        <img class="main-header__logo" src="img/logo.svg" width="66" height="66" alt="Логотип">
+      </a>
+
+      <div class="main-header__wrap-right">
+        <a class="main-header__login" href="login.html">
+          <p>Login</p>
+        </a>
+        <p>Cart <span>0</span></p>
+      </div>
+    </div>
+    <nav class="main-header__navigation">
+      <ul>
+        <li><a href="">What’s new</a></li>
+        <li>Chokers</li>
+        <li>Necklaces</li>
+        <li>Rings</li>
+        <li>Earrings</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="promo promo--all-jellery">
+      <h2>ALL JEWELLERY</h2>
+      <h3>Discover picks of fashion's finest trends in our jewellery catalog</h3>
+    </section>
+
+    <section class="gallery container container--air">
+      <h2 class="visually-hidden">Галерея товаров</h2>
+      <form class="gallery__filter" action="https://echo.htmlacademy.ru/courses" method="post">
+        <ul>
+          <li>
+            <p>Product</p>
+            <div id="product-list" class="gallery__filter-item gallery__filter--clo se">
+              <input type="checkbox" name="products" value="necklaces" id="filter-necklaces" class="visually-hidden" checked="">
+              <label class="gallery__feature" for="filter-necklaces">Necklaces</label>
+
+              <input type="checkbox" name="products" value="chokers" id="filter-chokers" class="visually-hidden" checked="">
+              <label class="gallery__feature" for="filter-chokers">Chokers</label>
+
+              <input type="checkbox" name="products" value="rings" id="filter-rings" class="visually-hidden">
+              <label class="gallery__feature" for="filter-rings">Rings</label>
+
+              <input type="checkbox" name="products" value="earrings" id="filter-earrings" class="visually-hidden" checked="">
+              <label class="gallery__feature" for="filter-earrings">Earrings</label>
+            </div>
+          </li>
+          <li>
+            <p>Material</p>
+          </li>
+          <li>
+            <p>Collection</p>
+          </li>
+          <li>
+            <p>Price</p>
+            <div class="gallery__filter-item gallery__filter--clo se">
+
+            </div>
+          </li>
+        </ul>
+        <button class="gallery__filter-submit button" type="submit">Apply</button>
+        <button class="gallery__filter-reset button" type="reset">Clear All</button>
+      </form>
+      <div class="gallery__exhibits">
+        <ul>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/double-pearl-earrings-desktop@1x.webp 1x, img/double-pearl-earrings-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/double-pearl-earrings-tablet@1x.webp 1x, img/double-pearl-earrings-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/double-pearl-earrings-mobile@1x.webp 1x, img/double-pearl-earrings-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/double-pearl-earrings-mobile@1x.jpg" srcset="img/double-pearl-earrings-mobile@2x.jpg 2x" width="270" height="272" alt="Серьги из перламутра">
+            </picture>
+            <p>Double pearl earrings</p>
+            <h4>$ 115</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/black-choker-gold-bead-desktop@1x.webp 1x, img/black-choker-gold-bead-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/black-choker-gold-bead-tablet@1x.webp 1x, img/black-choker-gold-bead-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/black-choker-gold-bead-mobile@1x.webp 1x, img/black-choker-gold-bead-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/black-choker-gold-bead-mobile@1x.jpg" srcset="img/black-choker-gold-bead-mobile@2x.jpg 2x" width="270" height="272" alt="Серьги из перламутра">
+            </picture>
+            <p>Choker with gold bead</p>
+            <h4>$ 55</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/gold-layered-necklace-desktop@1x.webp 1x, img/gold-layered-necklace-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/gold-layered-necklace-tablet@1x.webp 1x, img/gold-layered-necklace-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/gold-layered-necklace-mobile@1x.webp 1x, img/gold-layered-necklace-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/gold-layered-necklace-mobile@1x.jpg" srcset="img/gold-layered-necklace-mobile@2x.jpg 2x" width="270" height="272" alt="Золотое Ожерелье">
+            </picture>
+            <p>Gold layered necklace</p>
+            <h4>$ 155</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/blue-gemstone-pendant-desktop@1x.webp 1x, img/blue-gemstone-pendant-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/blue-gemstone-pendant-tablet@1x.webp 1x, img/blue-gemstone-pendant-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/blue-gemstone-pendant-mobile@1x.webp 1x, img/blue-gemstone-pendant-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/blue-gemstone-pendant-mobile@1x.jpg" srcset="img/blue-gemstone-pendant-mobile@2x.jpg 2x" width="270" height="272" alt="Подвеска с голубым камнем">
+            </picture>
+            <p>Blue gemstone pendant</p>
+            <h4>$ 105</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/boho-earrings-desktop@1x.webp 1x, img/boho-earrings-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/boho-earrings-tablet@1x.webp 1x, img/boho-earrings-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/boho-earrings-mobile@1x.webp 1x, img/boho-earrings-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/boho-earrings-mobile@1x.jpg" srcset="img/boho-earrings-mobile@2x.jpg 2x" width="270" height="272" alt="Серьги круглые">
+            </picture>
+            <p>Boho earrings</p>
+            <h4>$ 75</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/bird-necklace-desktop@1x.webp 1x, img/bird-necklace-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/bird-necklace-tablet@1x.webp 1x, img/bird-necklace-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/bird-necklace-mobile@1x.webp 1x, img/bird-necklace-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/bird-necklace-mobile@1x.jpg" srcset="img/bird-necklace-mobile@2x.jpg 2x" width="270" height="272" alt="Золотое Ожерелье с птичкой">
+            </picture>
+            <p>Gold bird necklace</p>
+            <h4>$ 135</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/black-leather-choker-necklace-desktop@1x.webp 1x, img/black-leather-choker-necklace-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/black-leather-choker-necklace-tablet@1x.webp 1x, img/black-leather-choker-necklace-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/black-leather-choker-necklace-mobile@1x.webp 1x, img/black-leather-choker-necklace-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/black-leather-choker-necklace-mobile@1x.jpg" srcset="img/black-leather-choker-necklace-mobile@2x.jpg 2x" width="270" height="272" alt="Черный кожаный чокер">
+            </picture>
+            <p>Black leather choker</p>
+            <h4>$ 85</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace1-desktop@1x.webp 1x, img/purple-gemstone-necklace1-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/purple-gemstone-necklace1-tablet@1x.webp 1x, img/purple-gemstone-necklace1-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/purple-gemstone-necklace1-mobile@1x.webp 1x, img/purple-gemstone-necklace1-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/purple-gemstone-necklace1-mobile@1x.jpg" srcset="img/purple-gemstone-necklace1-mobile@2x.jpg 2x" width="270" height="272" alt="Ожерелье с аметистом">
+            </picture>
+            <p>Necklace with amethyst</p>
+            <h4>$ 145</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/elephant-earrings-desktop@1x.webp 1x, img/elephant-earrings-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/elephant-earrings-tablet@1x.webp 1x, img/elephant-earrings-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/elephant-earrings-mobile@1x.webp 1x, img/elephant-earrings-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/elephant-earrings-mobile@1x.jpg" srcset="img/elephant-earrings-mobile@2x.jpg 2x" width="270" height="272" alt="Серьги со слониками">
+            </picture>
+            <p>Elephant earrings</p>
+            <h4>$ 95</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/threader-necklace-closeup-desktop@1x.webp 1x, img/threader-necklace-closeup-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/threader-necklace-closeup-tablet@1x.webp 1x, img/threader-necklace-closeup-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/threader-necklace-closeup-mobile@1x.webp 1x, img/threader-necklace-closeup-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/threader-necklace-closeup-mobile@1x.jpg" srcset="img/threader-necklace-closeup-mobile@2x.jpg 2x" width="270" height="272" alt="Ожерелье простое">
+            </picture>
+            <p>Threader necklace</p>
+            <h4>$ 115</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/origami-crane-necklace-desktop@1x.webp 1x, img/origami-crane-necklace-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/origami-crane-necklace-tablet@1x.webp 1x, img/origami-crane-necklace-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/origami-crane-necklace-mobile@1x.webp 1x, img/origami-crane-necklace-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/origami-crane-necklace-mobile@1x.jpg" srcset="img/origami-crane-necklace-mobile@2x.jpg 2x" width="270" height="272" alt="Ожерелье с японским журавликом">
+            </picture>
+            <p>Origami crane necklace</p>
+            <h4>$ 105</h4>
+          </li>
+          <li>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/marble-earrings-desktop@1x.webp 1x, img/marble-earrings-desktop@2x.webp 2x">
+              <!-- 1х: 206px; 2x: 412px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/marble-earrings-tablet@1x.webp 1x, img/marble-earrings-tablet@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <source type="image/webp" srcset="img/marble-earrings-mobile@1x.webp 1x, img/marble-earrings-mobile@2x.webp 2x">
+              <!-- 1х: 130px; 2x: 260px -->
+              <img src="img/marble-earrings-mobile@1x.jpg" srcset="img/marble-earrings-mobile@2x.jpg 2x" width="270" height="272" alt="Серьги из мрамора">
+            </picture>
+            <p>Marble earrings</p>
+            <h4>$ 95</h4>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+    <div class="gallery__line">
+    </div>
+      <div class="gallery__pages">
+        <p>Previous</p>
+        <ul>
+          <li class="gallery__pages--active">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+
+        <p>Next</p>
+      </div>
+
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper container container--air">
+      <div class="footer__email">
+        <h3>The good stuff in your inbox</h3>
+        <h4>News and updates from CH. No spam, we promise.</h4>
+        <div class="footer__email-wrapper">
+          <label for="email" class="visually-hidden">строка поиска</label>
+          <input type="text" name="email" id="email" placeholder="Your E-mail">
+          <p>Sign Up</p>
+        </div>
+      </div>
+      <div class="footer__other">
+        <ul>
+          <li><a href="">Ordering & Payment</a></li>
+          <li><a href="">About CH</a></li>
+          <li><a href="">Terms & Conditions</a></li>
+          <li><a href="">Stores & Hours</a></li>
+          <li><a href="">Returns & Exchanges</a></li>
+          <li><a href="">Jobs</a></li>
+          <li><a href="">Delivery</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__socials">
+        <ul>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Pinterest</a></li>
+          <li><a href="">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

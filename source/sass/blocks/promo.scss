@@ -88,6 +88,26 @@
 //       font-size: 16px;
 //       line-height: 24px;
   }
+
+  &--all-jellery {
+    height: 261px;
+    background-image: url("../img/annicken-desktop@1x.jpg");
+    box-shadow: none;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/annicken-desktop@2x.jpg");
+    }
+
+    h2 {
+      margin-top: 102px;
+      font-size: 34px;
+      line-height: 130%;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+  }
 }
 //     &::after {
 //       content: "";

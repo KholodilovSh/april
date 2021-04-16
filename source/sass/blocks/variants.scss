@@ -1,0 +1,68 @@
+.variants {
+  margin: 130px 0 130px 0;
+
+  h2,
+  h3 {
+    position: relative;
+    text-align: center;
+    color: $letter;
+  }
+
+  h2 {
+    margin: 0 0 35px 0;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+  }
+
+  h3 {
+    margin: 0 0 60px 0;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    // width: 80px;
+    border-bottom: 1px solid $under-line;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+  }
+}
+
+.variants__cards {
+  justify-content: space-between;
+  margin-bottom: 60px;
+  color: $letter;
+  text-align: center;
+
+  p {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.variants__numbers {
+  justify-content: center;
+  color: $grey-letter;
+
+  &--active {
+    color: $letter;
+  }
+
+  li {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}

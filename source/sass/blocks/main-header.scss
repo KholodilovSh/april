@@ -84,14 +84,10 @@
     top: 5px;
     width: 14px;
     height: 14px;
-    background-image: url("../img/seek@1x.png");
+    background-image: url("../img/seek.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-
-    @media (min-resolution: 1.5dppx) {
-      background-image: url("../img/seek@2x.png");
-    }
 
     // @media (max-width: $tablet-width-only) {
     //   left: -28px;

@@ -24,6 +24,17 @@
   }
 }
 
+.gallery__item {
+  position: relative;
+
+  h4 {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  @include close-open(30px, 30px);
+}
+
 .gallery__wrapper {
   display: flex;
   justify-content: space-between;
@@ -48,7 +59,7 @@
     }
   }
 
-  p {
+  h4 {
     margin-left: 25px;
   }
 

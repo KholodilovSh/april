@@ -56,9 +56,9 @@
       <div class="gallery__wrapper container container--air">
         <form class="gallery__filter" action="https://echo.htmlacademy.ru/courses" method="post">
           <ul>
-            <li>
-              <p>Product</p>
-              <div id="product-list" class="gallery__filter-item gallery__filter--clo se">
+            <li class="gallery__item gallery__item--opened">
+              <h4>Product</h4>
+              <div id="product-list" class="gallery__filter-item">
                 <input type="checkbox" name="products" value="necklaces" id="filter-necklaces" class="visually-hidden"
                   checked>
                 <label class="gallery__feature" for="filter-necklaces">Necklaces</label>
@@ -75,16 +75,34 @@
                 <label class="gallery__feature" for="filter-earrings">Earrings</label>
               </div>
             </li>
-            <li>
-              <p>Material</p>
-            </li>
-            <li>
-              <p>Collection</p>
-            </li>
-            <li>
-              <p>Price</p>
-              <div class="gallery__filter-item gallery__filter--clo se">
+            <li class="gallery__item gallery__item--closed">
+              <h4>Material</h4>
+              <div id="material-list" class="gallery__filter-item">
+                <input type="checkbox" name="materials" value="gold" id="filter-gold" class="visually-hidden"
+                  checked>
+                <label class="gallery__feature" for="filter-gold">Gold</label>
 
+                <input type="checkbox" name="materials" value="silver" id="filter-silver" class="visually-hidden"
+                  checked>
+                <label class="gallery__feature" for="filter-silver">Silver</label>
+              </div>
+            </li>
+            <li class="gallery__item gallery__item--closed">
+              <h4>Collection</h4>
+              <div id="collection-list" class="gallery__filter-item">
+                <input type="checkbox" name="collections" value="pink-flamingo" id="filter-pink-flamingo" class="visually-hidden"
+                  checked>
+                <label class="gallery__feature" for="filter-pink-flamingo">Pink flamingo</label>
+
+                <input type="checkbox" name="collections" value="dreams" id="filter-dreams" class="visually-hidden"
+                  checked>
+                <label class="gallery__feature" for="filter-dreams">Dreams</label>
+              </div>
+            </li>
+            <li class="gallery__item gallery__item--closed">
+              <h4>Price</h4>
+              <div class="gallery__filter-item">
+                слайдер
               </div>
             </li>
           </ul>

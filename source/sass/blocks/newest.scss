@@ -1,6 +1,14 @@
 .newest {
   margin-bottom: 130px;
 
+  @include header-subheader;
+
+  span {
+    font-size: 42px;
+  }
+
+  @include under-line(74px);
+
   ul {
     list-style: none;
     padding: 0;

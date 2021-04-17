@@ -18,3 +18,57 @@
     }
   }
 }
+
+@mixin header-subheader {
+  h2,
+  h3 {
+    position: relative;
+    text-align: center;
+    color: $letter;
+  }
+
+  h2 {
+    margin: 0 0 35px 0;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+  }
+}
+
+@mixin close-open($top: 50px, $right: 60px) {
+  h4:hover {
+    cursor: pointer;
+    color: red;
+  }
+
+  &--closed {
+    p,
+    div {
+      display: none;
+    }
+
+    h4::after {
+      content: "";
+      position: absolute;
+      top: $top;
+      right: $right;
+      width: 16px;
+      height: 9px;
+      background-image: url("../img/closed.svg");
+    }
+  }
+
+  &--opened {
+    h4::after {
+      content: "";
+      position: absolute;
+      top: $top;
+      right: $right;
+      width: 16px;
+      height: 9px;
+      background-image: url("../img/closed.svg");
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -3,7 +3,6 @@
   max-width: 970px;
 
   h2 {
-    position: relative;
     text-align: center;
     color: $letter;
     margin: 0 0 60px 0;
@@ -17,33 +16,71 @@
     list-style: none;
     padding: 0;
   }
+}
 
-  li {
-    padding-top: 50px;
-    padding-bottom: 49px;
-    border: 1px solid $under-line;
-    margin-top: -1px;
+.faq__question {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 49px;
+  border: 1px solid $under-line;
+  margin-top: -1px;
 
-    h4,
-    p {
-      margin: 0;
-      font-family: "Poppins", "Arial", sans-serif;
-    }
+  h4,
+  p {
+    margin: 0;
+    font-family: "Poppins", "Arial", sans-serif;
+  }
 
-    h4 {
-      margin-left: 38px;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 130%;
-    }
+  h4 {
 
-    p {
-      margin-left: 50px;
-      margin-top: 20px;
-      max-width: 527px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 130%;
-    }
+    margin-left: 38px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  @include close-open;
+  // h4:hover {
+  //   cursor: pointer;
+  //   color: red;
+  // }
+
+  // &--closed {
+  //   p {
+  //     display: none;
+  //   }
+
+  //   h4::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 50px;
+  //     right: 60px;
+  //     width: 16px;
+  //     height: 9px;
+  //     background-image: url("../img/closed.svg");
+  //   }
+  // }
+
+  // &--opened {
+  //   h4::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 50px;
+  //     right: 60px;
+  //     width: 16px;
+  //     height: 9px;
+  //     background-image: url("../img/closed.svg");
+  //     transform: rotate(180deg);
+  //   }
+  // }
+
+  p {
+    margin-left: 50px;
+    margin-top: 20px;
+    max-width: 527px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
   }
 }
+

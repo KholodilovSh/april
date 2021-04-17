@@ -1,20 +1,6 @@
 .blog {
   margin-bottom: 130px;
 
-  h2,
-  h3 {
-    position: relative;
-    text-align: center;
-    color: $letter;
-  }
-
-  h2 {
-    margin: 0 0 35px 0;
-    font-weight: bold;
-    font-size: 34px;
-    line-height: 130%;
-    letter-spacing: 0.03em;
-  }
-
+  @include header-subheader;
   @include under-line(64px);
 }

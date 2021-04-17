@@ -1,8 +1,6 @@
 .gallery {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   margin-top: 80px;
-  max-width: 1170px;
   font-family: "Poppins", "Arial", sans-serif;
 
   ul {
@@ -14,6 +12,22 @@
   p {
     margin: 0;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 120px;
+    height: 1px;
+    left: 0;
+    width: 100vw;
+    background-color: $line;
+  }
+}
+
+.gallery__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
 }
 
 .gallery__filter {
@@ -92,13 +106,13 @@
   }
 }
 
-.gallery__pages {
+.gallery__control {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 80px;
 
   ul {
-    margin: 0;
     color: $grey-letter;
   }
 
@@ -110,8 +124,4 @@
   p {
     color: $letter;
   }
-}
-
-.gallery__line {
-  border-bottom: 1px solid $line;
 }

@@ -1,0 +1,20 @@
+@mixin under-line($length: 80px) {
+  h3 {
+    margin: 0 0 70px 0;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $length;
+      background-color: $under-line;
+    }
+  }
+}

@@ -4,6 +4,11 @@
   left: 0;
   right: 0;
   color: $letter;
+  border-bottom: 1px solid $line;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .main-header__wrap {
@@ -57,9 +62,51 @@
     list-style: none;
     width: 493px;
     font-family: "Poppins", "Arial", sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.main-header__seek {
+  position: relative;
+  margin-left: 30px;
+
+  input {
+    border: none;
+  }
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/seek@1x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/seek@2x.png");
+    }
+
+    // @media (max-width: $tablet-width-only) {
+    //   left: -28px;
+    //   top: 0;
+    //   width: 251px;
+    //   height: 361px;
+    //   background-image: url("../img/2005_tablet@1x.png");
+
+    //   @media (min-resolution: 1.5dppx) {
+    //     background-image: url("../img/2005_tablet@2x.png");
+    //   }
+    // }
+
+    // @media (max-width: $mobile-width-only) {
+    //   display: none;
+    // }
   }
 }

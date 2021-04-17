@@ -1,4 +1,4 @@
-.variants {
+.like {
   margin-top: 130px;
   margin-bottom: 130px;
 
@@ -30,7 +30,7 @@
   }
 }
 
-.variants__cards {
+.like__cards {
   justify-content: space-between;
   margin-bottom: 60px;
   color: $letter;
@@ -46,7 +46,7 @@
   }
 }
 
-.variants__numbers {
+.like__numbers {
   justify-content: center;
   color: $grey-letter;
 
@@ -58,4 +58,6 @@
     margin-left: 8px;
     margin-right: 8px;
   }
+
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }

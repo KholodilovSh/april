@@ -44,8 +44,24 @@
   }
 
   p {
+    position: relative;
     margin-top: 0;
     margin-bottom: 15px;
+    margin-right: 40px;
+    color: $white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: 5px;
+      width: 29px;
+      height: 9px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url("../img/next-white.svg");
+    }
   }
 }
 
@@ -82,7 +98,6 @@
     top: 5px;
     width: 15px;
     height: 15px;
-    opacity: 1;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

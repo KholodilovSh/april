@@ -10,7 +10,42 @@
   @include under-line(74px);
 
   ul {
-    list-style: none;
+    margin: 0;
     padding: 0;
+    list-style: none;
   }
+}
+
+.newest__photos {
+  display: grid;
+  grid-template-areas: "left center right";
+  grid-template-columns: 230px 400px 480px;
+  gap: 30px;
+}
+
+.newest__left {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  grid-area: left;
+
+}
+
+.newest__center {
+  grid-area: center;
+}
+
+.newest__right {
+  grid-area: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.newest__top {
+  align-self: flex-start;
+}
+
+.newest__bottom {
+  align-self: flex-end;
 }

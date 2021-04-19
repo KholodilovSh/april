@@ -1,5 +1,6 @@
 .newest {
   margin-bottom: 130px;
+  max-width: 1170px;
 
   @include header-subheader;
 
@@ -19,9 +20,9 @@
 .newest__photos {
   display: grid;
   grid-template-areas: "left center right";
-  grid-template-columns: 230px 400px 480px;
-  gap: 30px;
-  max-width: 1170px;
+  // grid-template-columns: 230px 400px 480px;
+  grid-template-columns: 19.7% 34.2% 41%;
+  gap: 2.5%;
 }
 
 .newest__left {

@@ -1,0 +1,108 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $letter;
+  border-bottom: 1px solid $line;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.main-header__wrap {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+
+  // @media (max-width: $tablet-width-only) {
+  //   margin-top: 20px;
+  // }
+
+  // @media (max-width: $mobile-width-only) {
+  //   margin-top: 17px;
+  // }
+}
+
+// .main-header__logo {
+//   width: 202px;
+
+//   @media (max-width: $mobile-width-only) {
+//     width: 38px;
+//   }
+// }
+
+.main-header__wrap-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 119px;
+
+  // @media (max-width: $tablet-width-only) {
+  //   min-width: 88px;
+  //   width: auto;
+  // }
+}
+
+.main-header__navigation {
+  border-top: 1px solid $line;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0 25px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 493px;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.main-header__seek {
+  position: relative;
+  margin-left: 30px;
+
+  input {
+    border: none;
+  }
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/seek.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    // @media (max-width: $tablet-width-only) {
+    //   left: -28px;
+    //   top: 0;
+    //   width: 251px;
+    //   height: 361px;
+    //   background-image: url("../img/2005_tablet@1x.png");
+
+    //   @media (min-resolution: 1.5dppx) {
+    //     background-image: url("../img/2005_tablet@2x.png");
+    //   }
+    // }
+
+    // @media (max-width: $mobile-width-only) {
+    //   display: none;
+    // }
+  }
+}

@@ -1,0 +1,138 @@
+.gallery {
+  position: relative;
+  margin-top: 80px;
+  font-family: "Poppins", "Arial", sans-serif;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 120px;
+    height: 1px;
+    left: 0;
+    width: 100vw;
+    background-color: $line;
+  }
+}
+
+.gallery__item {
+  position: relative;
+
+  h4 {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  @include close-open(30px, 30px);
+}
+
+.gallery__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+}
+
+.gallery__filter {
+  margin-right: 50px;
+  width: 250px;
+
+  li {
+    margin-top: -1px;
+    padding-top: 28px;
+    padding-bottom: 27px;
+    border: 1px solid $under-line;
+
+    label {
+      display: block;
+      margin-left: 60px;
+      margin-top: 13px;
+      margin-bottom: 2px;
+    }
+  }
+
+  h4 {
+    margin-left: 25px;
+  }
+
+  &--close {
+    display: none;
+  }
+}
+
+.gallery__filter-item {
+  margin-top: 30px;
+}
+
+.gallery__filter-submit,
+.gallery__filter-reset {
+  width: 250px;
+  height: 68px;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.gallery__filter-submit {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  border: none;
+  color: $white;
+  background-color: $menu-background;
+}
+
+.gallery__filter-reset {
+  color: $letter;
+  background-color: $white;
+  border: 1px solid $menu-background;
+}
+
+.gallery__exhibits {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    p,
+    h4 {
+      text-align: center;
+    }
+
+    p {
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.gallery__control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 80px;
+
+  ul {
+    color: $grey-letter;
+  }
+
+  li {
+    margin-right: 15px;
+  }
+
+  &--active,
+  p {
+    color: $letter;
+  }
+}

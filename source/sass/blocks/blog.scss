@@ -1,0 +1,6 @@
+.blog {
+  margin-bottom: 130px;
+
+  @include header-subheader;
+  @include under-line(64px);
+}

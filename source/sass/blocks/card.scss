@@ -1,0 +1,130 @@
+.card {
+  margin-top: 190px + 80px;
+  margin-bottom: 130px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1070px;
+}
+
+.card__photos {
+  display: grid;
+  grid-template-areas: "small big";
+  grid-template-columns: 100px 470px;
+  column-gap: 30px;
+}
+
+.card__small {
+  grid-area: small;
+
+  li {
+    margin-bottom: 30px;
+    height: 125px;
+  }
+}
+
+.card__big {
+  grid-area: big;
+}
+
+.card__description {
+  width: 35%;
+  max-width: 370px;
+  color: $letter;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 130%;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 130%;
+  }
+}
+
+.card__info {
+  h3,
+  p {
+    display: inline;
+    padding-right: 30px;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  h3 {
+    color: $grey-letter;
+  }
+
+  table {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 100%;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    border-collapse: collapse;
+
+    td {
+      height: 30px;
+      border-bottom: 1px solid $line;
+    }
+  }
+}
+
+.card__feature-value {
+  text-align: right;
+}
+
+.card__button {
+  position: relative;
+  display: block;
+  margin-bottom: 21px;
+  width: 100%;
+  height: 68px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $white;
+  background-color: $under-line;
+  border: none;
+
+  &::after {
+    content: "Add to card";
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.card__conditions {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: $grey-letter;
+}

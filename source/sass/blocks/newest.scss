@@ -21,6 +21,7 @@
   grid-template-areas: "left center right";
   grid-template-columns: 230px 400px 480px;
   gap: 30px;
+  max-width: 1170px;
 }
 
 .newest__left {
@@ -40,6 +41,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  height: 400px;
 }
 
 .newest__top {

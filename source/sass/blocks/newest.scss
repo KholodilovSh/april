@@ -20,7 +20,6 @@
 .newest__photos {
   display: grid;
   grid-template-areas: "left center right";
-  // grid-template-columns: 230px 400px 480px;
   grid-template-columns: 19.7% 34.2% 41%;
   gap: 2.5%;
 }
@@ -30,7 +29,6 @@
   grid-template-rows: 1fr 1fr;
   gap: 30px;
   grid-area: left;
-
 }
 
 .newest__center {

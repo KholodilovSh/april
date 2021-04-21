@@ -21,38 +21,42 @@
       <!-- 1х: 38px; 2x: 76px -->
       <img class="cart__logo" src="img/logo.svg" width="30" height="30" alt="Логотип - на главную">
     </a>
-    <h1>The item was added to your cart</h1>
-    <div class="cart__product">
-      <picture>
-        <!-- 1х: 84px; 2x: 168px -->
-        <source type="image/webp" media="(min-width: 1024px)"
-          srcset="img/necklace-detail-desktop@1x.webp 1x, img/necklace-detail-desktop@2x.webp 2x">
-        <!-- 1х: 88px; 2x: 176px -->
-        <source type="image/webp" media="(min-width: 768px)"
-          srcset="img/necklace-detail-tablet@1x.webp 1x, img/necklace-detail-tablet@2x.webp 2x">
-        <!-- 1х: 70px; 2x: 140px -->
-        <source type="image/webp" srcset="img/necklace-detail-mobile@1x.webp 1x, img/necklace-detail-mobile@2x.webp 2x">
-        <!-- 1х: 70px; 2x: 140px -->
-        <img src="img/necklace-detail-mobile@1x.jpg" srcset="img/necklace-detail-mobile@2x.jpg 2x" width="84"
-          height="79" alt="Ожерелье крупно">
-      </picture>
-      <div>
-        <h2>Gold Necklace</h2>
-        <p>$ 115</p>
+    <div class="cart__wrapper">
+      <h1>The item was added to your cart</h1>
+      <div class="cart__product">
+        <picture>
+          <!-- 1х: 84px; 2x: 168px -->
+          <source type="image/webp" media="(min-width: 1024px)"
+            srcset="img/necklace-detail-desktop@1x.webp 1x, img/necklace-detail-desktop@2x.webp 2x">
+          <!-- 1х: 88px; 2x: 176px -->
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/necklace-detail-tablet@1x.webp 1x, img/necklace-detail-tablet@2x.webp 2x">
+          <!-- 1х: 70px; 2x: 140px -->
+          <source type="image/webp"
+            srcset="img/necklace-detail-mobile@1x.webp 1x, img/necklace-detail-mobile@2x.webp 2x">
+          <!-- 1х: 70px; 2x: 140px -->
+          <img src="img/necklace-detail-mobile@1x.jpg" srcset="img/necklace-detail-mobile@2x.jpg 2x" width="84"
+            height="79" alt="Ожерелье крупно">
+        </picture>
+        <div>
+          <h2>Gold Necklace</h2>
+          <h3>$ 115</h3>
+        </div>
+        <div class="cart__plus-minus">
+          <button class="cart__button cart__button--plus" type="button"></button>
+          <p>1</p>
+          <button class="cart__button" type="button"></button>
+        </div>
       </div>
-      <div class="cart__plus-minus">
-        <button type="button">+</button>
-        <p>1</p>
-        <button type="button">-</button>
+      <div class="cart__summary">
+        <h3>You have 1 item in the cart</h3>
+        <p>Cart subtotal: $ 115</p>
+      </div>
+      <div class="cart__choice">
+        <a class="cart__choice-continue" href="catalog.html">Continue shopping</a>
+        <a class="cart__choice-basket" href="basket.html">Checkout</a>
       </div>
     </div>
-    <div class="cart__summory">
-      <h3>You have 1 item in the cart</h3>
-      <p>Cart subtotal: $ 115</p>
-    </div>
-    <p>Continue shopping</p>
-    <p>Checkout</p>
-
   </section>
 </body>
 

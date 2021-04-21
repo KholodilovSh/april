@@ -5,7 +5,12 @@
   const login = document.querySelector('.login');
   const overlay = document.querySelector('.overlay');
   const mainHeaderLogin = document.querySelector('.main-header__login');
+  const faqQuestions = document.querySelector('.faq__questions');
+  const cardButton = document.querySelector('.card__button');
+  const cart = document.querySelector('.cart');
+
   let onClickMainHeaderLogin;
+  let onClickCardButton;
 
   if (login && mainHeaderLogin) {
 
@@ -91,43 +96,80 @@
     };
   }
 
-  const onClickMainFooterFirstParts = function () {
+  if (cart && cardButton) {
 
-    const closeBlock = footerFirstParts.classList.contains('footer-multilines__parts--closed');
-    toggleAccordeon(footerFirstParts, 'footer-multilines__parts', closeBlock);
+    const onEscapeModalMenu = function (evt) {
+      if (evt.key === 'Escape') {
+        closeForm();
+      }
+    };
 
-    if (!footerFirstContacts.classList.contains('footer-multilines__contacts--closed')) {
-      toggleAccordeon(footerFirstContacts, 'footer-multilines__contacts', false);
+    const onClickOverlay = function () {
+      closeForm();
+    };
+
+    const onClickMenuClose = function () {
+      closeForm();
+    };
+
+    const closeForm = function () {
+      cart.classList.remove('cart--show');
+      document.body.classList.remove('body--overflow-hidden');
+      cartClose.removeEventListener('click', onClickMenuClose);
+      cart.removeEventListener('click', onClickOverlay);
+
+      if (overlay) {
+        overlay.classList.remove('overlay--show');
+        overlay.removeEventListener('click', onClickOverlay);
+      }
+
+      cardButton.addEventListener('click', onClickCardButton);
+    };
+
+    const cartClose = cart.querySelector('.cart__close');
+
+    onClickCardButton = function (evtClick) {
+
+      if (evtClick) {
+        evtClick.preventDefault();
+      }
+
+      cardButton.removeEventListener('click', onClickCardButton);
+
+      cart.classList.add('cart--show');
+      document.body.classList.add('body--overflow-hidden');
+
+      cartClose.addEventListener('click', onClickMenuClose);
+      document.addEventListener('keydown', onEscapeModalMenu);
+
+      if (overlay) {
+        overlay.classList.add('overlay--show');
+        overlay.addEventListener('click', onClickOverlay);
+      }
+    };
+
+    cardButton.addEventListener('click', onClickCardButton);
+  }
+
+  if (faqQuestions) {
+
+    const onClickFaqQuestion = function (event) {
+
+      const question = event.target.parentElement;
+
+      if (!question.classList.contains('faq__question--closed')) {
+        question.classList.add('faq__question--closed');
+        question.classList.remove('faq__question--opened');
+      } else {
+        question.classList.remove('faq__question--closed');
+        question.classList.add('faq__question--opened');
+      }
     }
-  };
 
-  const onClickMainFooterFirstContacts = function () {
+    faqQuestions.addEventListener('click', onClickFaqQuestion);
 
-    const closeBlock = footerFirstContacts.classList.contains('footer-multilines__contacts--closed');
-    toggleAccordeon(footerFirstContacts, 'footer-multilines__contacts', closeBlock);
-    if (!footerFirstParts.classList.contains('footer-multilines__parts--closed')) {
-      toggleAccordeon(footerFirstParts, 'footer-multilines__parts', false);
-    }
-  };
+  }
 
-  const toggleAccordeon = function (block, nameClass, closeBlock) {
-    if (closeBlock) {
-      block.classList.remove(nameClass + '--closed');
-      block.classList.add(nameClass + '--open');
-    } else {
-      block.classList.remove(nameClass + '--open');
-      block.classList.add(nameClass + '--closed');
-    }
-  };
-
-  // if (footerFirstParts) {
-  //   footerFirstParts.classList.add('footer-multilines__parts--closed');
-  //   footerFirstParts.addEventListener('click', onClickMainFooterFirstParts);
-  // }
-  // if (footerFirstContacts) {
-  //   footerFirstContacts.classList.add('footer-multilines__contacts--closed');
-  //   footerFirstContacts.addEventListener('click', onClickMainFooterFirstContacts);
-  // }
   if (login && mainHeaderLogin) {
     mainHeaderLogin.addEventListener('click', onClickMainHeaderLogin);
   }

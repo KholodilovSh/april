@@ -63,6 +63,11 @@
     background-color: $main-ground;
     font-size: 14px;
     line-height: 21px;
+
+    &:focus,
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 

@@ -35,10 +35,50 @@
   @include close-open(30px, 30px);
 }
 
+.gallery__slider {
+  position: relative;
+  margin: 0 25px 50px 25px;
+  border-top: 1px solid $main-ground;
+}
+
+.gallery__price {
+  position: absolute;
+  top: 17px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -26px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $menu-background;
+  }
+
+  &--low {
+    left: 38px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: 10px;
+      width: 100px;
+      height: 1px;
+      background-color: $menu-background;
+    }
+  }
+
+  &--high {
+    right: 25px;
+  }
+}
+
+
 .gallery__wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 1170px;
 }
 
 .gallery__filter {

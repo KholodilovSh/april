@@ -9,6 +9,10 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
+
+  @media (max-width: $tablet-width-only) {
+    border: none;
+  }
 }
 
 .main-header__wrap {
@@ -36,6 +40,7 @@
 // }
 
 .main-header__wrap-right {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -51,10 +56,21 @@
     opacity: 0.3;
   }
 
-  // @media (max-width: $tablet-width-only) {
-  //   min-width: 88px;
-  //   width: auto;
-  // }
+  @media (max-width: $tablet-width-only) {
+    a::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 0;
+      width: 20px;
+      height: 18px;
+      background-image: url("../img/login.svg");
+    }
+
+    p {
+      display: none;
+    }
+  }
 }
 
 .main-header__navigation {
@@ -84,6 +100,10 @@
   li:active {
     opacity: 0.3;
   }
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
 }
 
 .main-header__seek {
@@ -110,21 +130,51 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+  }
 
-    // @media (max-width: $tablet-width-only) {
-    //   left: -28px;
-    //   top: 0;
-    //   width: 251px;
-    //   height: 361px;
-    //   background-image: url("../img/2005_tablet@1x.png");
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
 
-    //   @media (min-resolution: 1.5dppx) {
-    //     background-image: url("../img/2005_tablet@2x.png");
-    //   }
-    // }
+.main-header__button {
+  display: none;
 
-    // @media (max-width: $mobile-width-only) {
-    //   display: none;
-    // }
+  @media (max-width: $tablet-width-only) {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: $white;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 25px;
+      height: 2px;
+      background-color: $letter;
+      cursor: pointer;
+      box-shadow:
+        0 7px 0 0 $black,
+        0 14px 0 0 $black;
+    }
+
+    &--clicked {
+      display: none;
+    }
+  }
+
+  &--no-js {
+    @media (max-width: $tablet-width-only) {
+      display: none;
+    }
   }
 }

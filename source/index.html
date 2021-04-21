@@ -19,6 +19,8 @@
   <header class="main-header">
     <h1 class="visually-hidden">Jewellery</h1>
     <div class="main-header__wrap container container--air">
+      <button class="main-header__button mmain-header__button--no-js" type="button">
+      </button>
       <div class="main-header__seek">
         <label for="seek" class="visually-hidden">строка поиска</label>
         <input type="text" name="seek" id="seek" placeholder="Type here to search">
@@ -216,22 +218,22 @@
     <section class="faq container container--air">
       <h2>Frequently asked questions</h2>
       <ul class="faq__questions">
-        <li class="faq__question faq__question--opened">
+        <li class="faq__question">
           <h4>What materials are the jewellery made of?</h4>
           <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
             semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__question faq__question--closed">
+        <li class="faq__question">
           <h4>Which countries do you deliver to?</h4>
           <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
             semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__question faq__question--closed">
+        <li class="faq__question">
           <h4>What are the payment methods?</h4>
           <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
             semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__question faq__question--closed">
+        <li class="faq__question">
           <h4>Can I return the jewellery if it didn’t fit me?</h4>
           <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
             semiprecious stones and crystals.</p>
@@ -290,7 +292,7 @@
           </picture>
         </div>
         <ul class="newest__right">
-          <li class="newest__top">
+          <li class="newest__top newest__top--left">
             <picture>
               <!-- 1х: 232px; 2x: 464px -->
               <source type="image/webp" media="(min-width: 1024px)"
@@ -305,7 +307,7 @@
                 alt="Кольцо, браслет и брошь">
             </picture>
           </li>
-          <li class="newest__top">
+          <li class="newest__top newest__top--right">
             <picture>
               <!-- 1х: 218px; 2x: 436px -->
               <source type="image/webp" media="(min-width: 1024px)"
@@ -320,7 +322,7 @@
                 alt="Ожерелья, серьги">
             </picture>
           </li>
-          <li class="newest__bottom">
+          <li class="newest__bottom  newest__bottom--left">
             <picture>
               <!-- 1х: 218px; 2x: 436px -->
               <source type="image/webp" media="(min-width: 1024px)"
@@ -334,7 +336,7 @@
               <img src="img/5-mobile@1x.jpg" srcset="img/5-mobile@2x.jpg 2x" width="218" height="191" alt="Серьги">
             </picture>
           </li>
-          <li class="newest__bottom">
+          <li class="newest__bottom newest__bottom--right">
             <picture>
               <!-- 1х: 232px; 2x: 464px -->
               <source type="image/webp" media="(min-width: 1024px)"
@@ -357,8 +359,10 @@
   <footer class="footer">
     <div class="footer__wrapper container container--air">
       <div class="footer__email">
-        <h3>The good stuff in your inbox</h3>
-        <h4>News and updates from CH. No spam, we promise.</h4>
+        <div class="footer__email-header">
+          <h3>The good stuff in your inbox</h3>
+          <h4>News and updates from CH. No spam, we promise.</h4>
+        </div>
         <div class="footer__email-wrapper">
           <label for="your-email" class="visually-hidden">строка поиска</label>
           <input type="text" name="email" id="your-email" placeholder="Your E-mail">

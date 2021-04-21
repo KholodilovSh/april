@@ -8,7 +8,9 @@
   const cardButton = document.querySelector('.card__button');
   const cart = document.querySelector('.cart');
   const faqQuestions = document.querySelector('.faq__questions');
+  const faqQuestionArray = document.querySelectorAll('.faq__question');
   const galleryFilter = document.querySelector('.gallery__filter');
+  const galleryItems = document.querySelectorAll('.gallery__item');
 
   let onClickMainHeaderLogin;
   let onClickCardButton;
@@ -154,7 +156,10 @@
     cardButton.addEventListener('click', onClickCardButton);
   }
 
-  if (faqQuestions) {
+  if (faqQuestions && faqQuestionArray) {
+    for (let i = 0; i < faqQuestionArray.length; i++) {
+      faqQuestionArray[i].classList.add('faq__question--closed');
+    }
 
     const onClickFaqQuestion = function (event) {
 
@@ -167,13 +172,16 @@
         question.classList.remove('faq__question--closed');
         question.classList.add('faq__question--opened');
       }
-    }
+    };
 
     faqQuestions.addEventListener('click', onClickFaqQuestion);
 
   }
 
-  if (galleryFilter) {
+  if (galleryFilter && galleryItems) {
+    for (let i = 0; i < galleryItems.length; i++) {
+      galleryItems[i].classList.add('gallery__item--closed');
+    }
 
     const onClickGalleryFilter = function (event) {
 
@@ -186,7 +194,7 @@
         filter.classList.remove('gallery__item--closed');
         filter.classList.add('gallery__item--opened');
       }
-    }
+    };
 
     galleryFilter.addEventListener('click', onClickGalleryFilter);
 

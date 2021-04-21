@@ -172,7 +172,7 @@
         question.classList.remove('faq__question--closed');
         question.classList.add('faq__question--opened');
       }
-    }
+    };
 
     faqQuestions.addEventListener('click', onClickFaqQuestion);
 
@@ -194,7 +194,7 @@
         filter.classList.remove('gallery__item--closed');
         filter.classList.add('gallery__item--opened');
       }
-    }
+    };
 
     galleryFilter.addEventListener('click', onClickGalleryFilter);
 

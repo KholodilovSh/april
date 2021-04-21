@@ -13,12 +13,24 @@
 }
 
 .footer__email {
+  @media (max-width: $tablet-width-only) {
+    grid-area: email;
+  }
+}
+
+.footer__email-header {
+  width: 407px;
+
   h3 {
     margin: 0;
     font-family: "Cormorant Garamond", "Times New Roman", serif;
     font-weight: 700;
     font-size: 34px;
     line-height: 130%;
+
+    @media (max-width: $tablet-width-only) {
+      margin-bottom: 25px;
+    }
   }
 
   h4 {
@@ -29,18 +41,24 @@
     text-align: center;
     width: 328px;
     color: $grey-letter;
+
+    @media (max-width: $tablet-width-only) {
+      width: 100%;
+    }
   }
 }
 
 .footer__email-wrapper {
   display: flex;
   justify-content: space-between;
+
   border-bottom: 1px solid $white;
 
   input {
+    margin-bottom: 1px;
+    border: none;
     color: $white;
     background-color: $black;
-    border: none;
 
     &:focus,
     &:hover {
@@ -71,13 +89,28 @@
 }
 
 .footer__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 500px 380px 115px;
   justify-content: space-between;
+
   margin-top: 100px;
   margin-bottom: 100px;
+
+  @media (max-width: $tablet-width-only) {
+    grid-template-columns: none;
+    grid-template-areas: "email email"
+      "other socials";
+    gap: 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 .footer__other {
+  @media (max-width: $tablet-width-only) {
+    grid-area: other;
+  }
+
   ul {
     display: grid;
     grid-template-columns: 220px 220px;
@@ -109,6 +142,10 @@
 }
 
 .footer__social {
+  @media (max-width: $tablet-width-only) {
+    grid-area: socials;
+  }
+
   &::after {
     content: "";
     position: absolute;

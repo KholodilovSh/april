@@ -19,7 +19,7 @@
 .newest__photos {
   display: grid;
   grid-template-areas: "left center right";
-  grid-template-columns: 19.7% 34.2% 41%;
+  grid-template-columns: 19.7% 34% 41%;
   gap: 2.5%;
 }
 
@@ -39,13 +39,29 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 400px;
+  height: 35.4%;
 }
 
 .newest__top {
   align-self: flex-start;
+
+  &--left {
+    width: 48.3%;
+  }
+
+  &--right {
+    width: 45.4%;
+  }
 }
 
 .newest__bottom {
   align-self: flex-end;
+
+  &--left {
+    width: 45.4%;
+  }
+
+  &--right {
+    width: 48.3%;
+  }
 }

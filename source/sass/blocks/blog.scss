@@ -9,6 +9,10 @@
     padding: 0;
     list-style: none;
   }
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 80px;
+  }
 }
 
 .blog__articles {
@@ -20,6 +24,14 @@
 
   img {
     display: block;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    display: block;
+
+    img {
+      width: 339px;
+    }
   }
 }
 
@@ -48,7 +60,15 @@
       height: 300px;
       right: 0;
       bottom: 0;
+
+      @media (max-width: $tablet-width-only) {
+        width: 339px;
+      }
     }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 50px;
   }
 }
 
@@ -68,10 +88,16 @@
   }
 
   h4 {
+    margin-top: 0;
     margin-bottom: 50px;
     font-weight: 600;
     font-size: 26px;
     line-height: 130%;
+
+    @media (max-width: $tablet-width-only) {
+      margin-left: 85px;
+      margin-right: 85px;
+    }
   }
 
   @include under-line(97px);

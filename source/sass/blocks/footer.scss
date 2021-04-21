@@ -41,6 +41,11 @@
     color: $white;
     background-color: $black;
     border: none;
+
+    &:focus,
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   p {
@@ -72,14 +77,27 @@
   margin-bottom: 100px;
 }
 
-.footer__other ul {
-  display: grid;
-  grid-template-columns: 220px 220px;
-  row-gap: 30px;
-  column-gap: 18px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
+.footer__other {
+  ul {
+    display: grid;
+    grid-template-columns: 220px 220px;
+    row-gap: 30px;
+    column-gap: 18px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  li {
+    &:focus,
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .footer__socials li {

@@ -29,7 +29,7 @@
       </a>
 
       <div class="main-header__wrap-right">
-        <a class="main-header__login" href="login.html">
+        <a class="main-header__login" href="login-no-js.html">
           <p>Login</p>
         </a>
         <p>Cart <span>0</span></p>
@@ -38,10 +38,10 @@
     <nav class="main-header__navigation">
       <ul>
         <li><a href="">What’s new</a></li>
-        <li>Chokers</li>
-        <li>Necklaces</li>
-        <li>Rings</li>
-        <li>Earrings</li>
+        <li><a href="">Chokers</a></li>
+        <li><a href="card.html">Necklaces</a></li>
+        <li><a href="">Rings</a></li>
+        <li><a href="">Earrings</a></li>
       </ul>
     </nav>
   </header>
@@ -56,46 +56,47 @@
       <div class="gallery__wrapper container container--air">
         <form class="gallery__filter" action="https://echo.htmlacademy.ru/courses" method="post">
           <ul>
-            <li class="gallery__item gallery__item--opened">
+            <li class="gallery__item gallery__item--closed">
               <h4>Product</h4>
               <div id="product-list" class="gallery__filter-item">
                 <input type="checkbox" name="products" value="necklaces" id="filter-necklaces" class="visually-hidden" checked="">
-                <label class="gallery__feature" for="filter-necklaces">Necklaces</label>
+                <label for="filter-necklaces">Necklaces</label>
 
                 <input type="checkbox" name="products" value="chokers" id="filter-chokers" class="visually-hidden" checked="">
-                <label class="gallery__feature" for="filter-chokers">Chokers</label>
+                <label for="filter-chokers">Chokers</label>
 
                 <input type="checkbox" name="products" value="rings" id="filter-rings" class="visually-hidden">
-                <label class="gallery__feature" for="filter-rings">Rings</label>
+                <label for="filter-rings">Rings</label>
 
                 <input type="checkbox" name="products" value="earrings" id="filter-earrings" class="visually-hidden" checked="">
-                <label class="gallery__feature" for="filter-earrings">Earrings</label>
+                <label for="filter-earrings">Earrings</label>
               </div>
             </li>
             <li class="gallery__item gallery__item--closed">
               <h4>Material</h4>
               <div id="material-list" class="gallery__filter-item">
                 <input type="checkbox" name="materials" value="gold" id="filter-gold" class="visually-hidden" checked="">
-                <label class="gallery__feature" for="filter-gold">Gold</label>
+                <label for="filter-gold">Gold</label>
 
                 <input type="checkbox" name="materials" value="silver" id="filter-silver" class="visually-hidden" checked="">
-                <label class="gallery__feature" for="filter-silver">Silver</label>
+                <label for="filter-silver">Silver</label>
               </div>
             </li>
             <li class="gallery__item gallery__item--closed">
               <h4>Collection</h4>
               <div id="collection-list" class="gallery__filter-item">
                 <input type="checkbox" name="collections" value="pink-flamingo" id="filter-pink-flamingo" class="visually-hidden" checked="">
-                <label class="gallery__feature" for="filter-pink-flamingo">Pink flamingo</label>
+                <label for="filter-pink-flamingo">Pink flamingo</label>
 
                 <input type="checkbox" name="collections" value="dreams" id="filter-dreams" class="visually-hidden" checked="">
-                <label class="gallery__feature" for="filter-dreams">Dreams</label>
+                <label for="filter-dreams">Dreams</label>
               </div>
             </li>
             <li class="gallery__item gallery__item--closed">
               <h4>Price</h4>
-              <div class="gallery__filter-item">
-                слайдер
+              <div class="gallery__filter-item gallery__slider">
+                <p class="gallery__price gallery__price--low">$ 55</p>
+                <p class="gallery__price gallery__price--high">$ 155</p>
               </div>
             </li>
           </ul>
@@ -274,7 +275,7 @@
             </li>
           </ul>
           <div class="gallery__control">
-            <p>Previous</p>
+            <p class="button">Previous</p>
             <ul>
               <li class="gallery__control--active">1</li>
               <li>2</li>
@@ -282,7 +283,7 @@
               <li>4</li>
               <li>5</li>
             </ul>
-            <p>Next</p>
+            <p class="button">Next</p>
           </div>
         </div>
       </div>
@@ -296,8 +297,8 @@
         <h3>The good stuff in your inbox</h3>
         <h4>News and updates from CH. No spam, we promise.</h4>
         <div class="footer__email-wrapper">
-          <label for="email" class="visually-hidden">строка поиска</label>
-          <input type="text" name="email" id="email" placeholder="Your E-mail">
+          <label for="your-email" class="visually-hidden">строка поиска</label>
+          <input type="text" name="email" id="your-email" placeholder="Your E-mail">
           <p>Sign Up</p>
         </div>
       </div>
@@ -324,6 +325,40 @@
       </ul>
     </div>
   </footer>
+  <section class="overlay">
+  </section>
+  <section class="login">
+    <picture>
+      <!-- 1х: 430px; 2x: 860px -->
+      <source type="image/webp" media="(min-width: 1024px)" srcset="img/sweet-ice-cream-desktop@1x.webp 1x, img/sweet-ice-cream-desktop@2x.webp 2x">
+      <!-- 1х: 442px; 2x: 884px -->
+      <source type="image/webp" media="(min-width: 768px)" srcset="img/sweet-ice-cream-tablet@1x.webp 1x, img/sweet-ice-cream-tablet@2x.webp 2x">
+      <!-- 1х: 270px; 2x: 540px -->
+      <source type="image/webp" srcset="img/sweet-ice-cream-mobile@1x.webp 1x, img/sweet-ice-cream-mobile@2x.webp 2x">
+      <!-- 1х: 270px; 2x: 540px -->
+      <img src="img/sweet-ice-cream-mobile@1x.jpg" srcset="img/sweet-ice-cream-mobile@2x.jpg 2x" width="430" height="138" alt="Королевские подвески">
+    </picture>
+    <h1>Log In</h1>
+    <form class="login__form" action="https://echo.htmlacademy.ru/courses" method="post">
+      <div class="login__email">
+        <label for="login-email" class="visually-hidden">ваш email</label>
+        <input type="email" name="login-email" id="email" placeholder="Your E-mail" required="">
+      </div>
+      <div class="login__text">
+        <label for="login-text" class="visually-hidden">пароль</label>
+        <input type="password" name="login-password" id="password" placeholder="Password" required="">
+      </div>
+      <p>Forgot your password?</p>
+
+      <button class="login__submit button" type="submit">Log In</button>
+      <div class="login__no-account">
+        <p>Don’t have an account? <span>Sign up</span></p>
+      </div>
+      <button class="login__close" type="reset" aria-label="закрыть"></button>
+    </form>
+  </section>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>

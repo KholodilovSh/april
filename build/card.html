@@ -29,7 +29,7 @@
       </a>
 
       <div class="main-header__wrap-right">
-        <a class="main-header__login" href="login.html">
+        <a class="main-header__login" href="login-no-js.html">
           <p>Login</p>
         </a>
         <p>Cart <span>0</span></p>
@@ -37,11 +37,11 @@
     </div>
     <nav class="main-header__navigation">
       <ul>
-        <li><a href="">What’s new</a></li>
-        <li>Chokers</li>
-        <li>Necklaces</li>
-        <li>Rings</li>
-        <li>Earrings</li>
+        <li><a href="catalog.html">What’s new</a></li>
+        <li><a href="catalog.html">Chokers</a></li>
+        <li><a href="">Necklaces</a></li>
+        <li><a href="catalog.html">Rings</a></li>
+        <li><a href="catalog.html">Earrings</a></li>
       </ul>
     </nav>
   </header>
@@ -125,7 +125,7 @@
                 </tr>
               </tbody>
             </table>
-            <a href="cart-no-js.html" class="card__button"></a>
+            <a href="cart-no-js.html" class="card__button button"></a>
             <ul class="card__conditions">
               <li>14 Day Returns</li>
               <li>2-Year Warranty</li>
@@ -136,7 +136,7 @@
       </div>
     </section>
 
-    <section class="like">
+    <section class="like container container--air">
       <h2>You May Also Like</h2>
       <h3>Shop Now</h3>
       <ul class="like__cards">
@@ -200,14 +200,12 @@
         </li>
       </ul>
 
-
       <ul class="like__numbers">
         <li class="like__numbers--active">1</li>
         <li>2</li>
         <li>3</li>
       </ul>
     </section>
-
 
   </main>
   <footer class="footer">
@@ -216,8 +214,8 @@
         <h3>The good stuff in your inbox</h3>
         <h4>News and updates from CH. No spam, we promise.</h4>
         <div class="footer__email-wrapper">
-          <label for="email" class="visually-hidden">строка поиска</label>
-          <input type="text" name="email" id="email" placeholder="Your E-mail">
+          <label for="your-email" class="visually-hidden">строка поиска</label>
+          <input type="text" name="email" id="your-email" placeholder="Your E-mail">
           <p>Sign Up</p>
         </div>
       </div>
@@ -281,6 +279,37 @@
     </div>
     <button class="cart__close" aria-label="закрыть"></button>
   </section>
+  <section class="login">
+    <picture>
+      <!-- 1х: 430px; 2x: 860px -->
+      <source type="image/webp" media="(min-width: 1024px)" srcset="img/sweet-ice-cream-desktop@1x.webp 1x, img/sweet-ice-cream-desktop@2x.webp 2x">
+      <!-- 1х: 442px; 2x: 884px -->
+      <source type="image/webp" media="(min-width: 768px)" srcset="img/sweet-ice-cream-tablet@1x.webp 1x, img/sweet-ice-cream-tablet@2x.webp 2x">
+      <!-- 1х: 270px; 2x: 540px -->
+      <source type="image/webp" srcset="img/sweet-ice-cream-mobile@1x.webp 1x, img/sweet-ice-cream-mobile@2x.webp 2x">
+      <!-- 1х: 270px; 2x: 540px -->
+      <img src="img/sweet-ice-cream-mobile@1x.jpg" srcset="img/sweet-ice-cream-mobile@2x.jpg 2x" width="430" height="138" alt="Королевские подвески">
+    </picture>
+    <h1>Log In</h1>
+    <form class="login__form" action="https://echo.htmlacademy.ru/courses" method="post">
+      <div class="login__email">
+        <label for="login-email" class="visually-hidden">ваш email</label>
+        <input type="email" name="login-email" id="email" placeholder="Your E-mail" required="">
+      </div>
+      <div class="login__text">
+        <label for="login-text" class="visually-hidden">пароль</label>
+        <input type="password" name="login-password" id="password" placeholder="Password" required="">
+      </div>
+      <p>Forgot your password?</p>
+
+      <button class="login__submit button" type="submit">Log In</button>
+      <div class="login__no-account">
+        <p>Don’t have an account? <span>Sign up</span></p>
+      </div>
+      <button class="login__close" type="reset" aria-label="закрыть"></button>
+    </form>
+  </section>
+
   <script src="js/main.js"></script>
 </body>
 

@@ -39,7 +39,7 @@
 @mixin close-open($top: 50px, $right: 60px) {
   h4:hover {
     cursor: pointer;
-    color: red;
+    opacity: 0.7;
   }
 
   &--closed {

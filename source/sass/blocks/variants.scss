@@ -53,6 +53,12 @@
   top: 60px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+
+  &:active,
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .variants__next {

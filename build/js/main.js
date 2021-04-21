@@ -2,12 +2,13 @@
 
 (function () {
 
-  const login = document.querySelector('.login');
   const overlay = document.querySelector('.overlay');
+  const login = document.querySelector('.login');
   const mainHeaderLogin = document.querySelector('.main-header__login');
-  const faqQuestions = document.querySelector('.faq__questions');
   const cardButton = document.querySelector('.card__button');
   const cart = document.querySelector('.cart');
+  const faqQuestions = document.querySelector('.faq__questions');
+  const galleryFilter = document.querySelector('.gallery__filter');
 
   let onClickMainHeaderLogin;
   let onClickCardButton;
@@ -94,6 +95,8 @@
 
       loginLogin.focus();
     };
+
+    mainHeaderLogin.addEventListener('click', onClickMainHeaderLogin);
   }
 
   if (cart && cardButton) {
@@ -170,7 +173,22 @@
 
   }
 
-  if (login && mainHeaderLogin) {
-    mainHeaderLogin.addEventListener('click', onClickMainHeaderLogin);
+  if (galleryFilter) {
+
+    const onClickGalleryFilter = function (event) {
+
+      const filter = event.target.parentElement;
+
+      if (!filter.classList.contains('gallery__item--closed')) {
+        filter.classList.add('gallery__item--closed');
+        filter.classList.remove('gallery__item--opened');
+      } else {
+        filter.classList.remove('gallery__item--closed');
+        filter.classList.add('gallery__item--opened');
+      }
+    }
+
+    galleryFilter.addEventListener('click', onClickGalleryFilter);
+
   }
 })();

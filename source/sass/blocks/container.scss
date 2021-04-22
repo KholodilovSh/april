@@ -10,38 +10,10 @@
 
   @media (max-width: $mobile-width-only) {
     max-width: 90%;
+    min-width: 290px;
   }
-
-  // &--promo {
-  //   @media (max-width: $tablet-width-only) and (min-width: $mobile-width-only) {
-  //     max-width: 715px - 2*68px;
-  //   }
-  // }
-
-  // &--text {
-  //   @media (max-width: $mobile-width-only) {
-  //     min-width: 290px;
-  //     max-width: none;
-  //     padding-left: 15px;
-  //     padding-right: 15px;
-  //   }
-  // }
 
   &--air {
     width: 96%;
   }
-
-  // &--variant {
-  //   width: 96%;
-
-  //   @media (max-width: $mobile-width-only) {
-  //     padding-right: 9px;
-  //   }
-  // }
-
-  // &--parts {
-  //   @media (max-width: $mobile-width-only) {
-  //     width: 290px;
-  //   }
-  // }
 }

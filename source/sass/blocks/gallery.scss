@@ -22,6 +22,32 @@
     width: 100vw;
     background-color: $line;
   }
+
+  &--no-js {
+    margin-top: 24px;
+    margin-bottom: 100px;
+    width: 400px;
+
+    .gallery__item {
+      border: none;
+      border-bottom: 1px solid $menu-background;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &--js {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    margin: auto;
+    display: none;
+  }
 }
 
 .gallery__item {
@@ -75,10 +101,13 @@
   }
 }
 
-
 .gallery__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-width-only) {
+    display: block;
+  }
 }
 
 .gallery__filter {
@@ -105,6 +134,14 @@
 
   &--close {
     display: none;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+
+    &--no-js {
+      display: block;
+    }
   }
 }
 
@@ -169,6 +206,29 @@
   border: 1px solid $menu-background;
 }
 
+.gallery__show-filter {
+  display: none;
+
+  @media (max-width: $tablet-width-only) {
+    position: relative;
+    display: block;
+    margin-bottom: 50px;
+    height: 68px;
+    color: $white;
+    background-color: $menu-background;
+
+    &::after {
+      content: "Filter";
+      position: absolute;
+      height: 12px;
+      width: 39px;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
 .gallery__exhibits {
   ul {
     display: flex;
@@ -190,6 +250,13 @@
       margin-bottom: 40px;
     }
   }
+
+  img {
+    @media (max-width: $tablet-width-only) {
+      width: 206px;
+      height: 208px;
+    }
+  }
 }
 
 .gallery__control {
@@ -209,5 +276,29 @@
   &--active,
   p {
     color: $letter;
+  }
+}
+
+.gallery__close {
+  @include close-button(23px, $white);
+
+  border-radius: 50%;
+  background-color: $black;
+}
+
+.gallery--show {
+  display: block;
+  width: 330px;
+  height: 550px;
+  box-shadow: 0 4px 30px $black;
+  background-color: $white;
+
+  form {
+    margin-top: 24px;
+  }
+
+  li {
+    border: none;
+    border-bottom: 1px solid $menu-background;
   }
 }

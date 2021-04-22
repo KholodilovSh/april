@@ -4,7 +4,7 @@
   margin-bottom: 130px;
 
   @include header-subheader;
-  @include under-line;
+  @include under-line-h3;
 
   ul {
     display: flex;
@@ -23,6 +23,10 @@
     h3 {
       margin-bottom: 60px;
     }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 70px;
   }
 }
 
@@ -48,10 +52,23 @@
     p {
       margin-top: 19px;
       margin-bottom: 21px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     img {
       width: 324px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    p {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    img {
+      width: 130px;
     }
   }
 }

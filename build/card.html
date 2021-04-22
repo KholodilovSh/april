@@ -19,35 +19,59 @@
   <header class="main-header">
     <h1 class="visually-hidden">All Jewellery</h1>
     <div class="main-header__wrap container container--air">
+      <button class="main-header__button mmain-header__button--no-js" type="button">
+      </button>
       <div class="main-header__seek">
+        <svg width="20" height="18" viewBox="0 0 20 18">
+          <use xlink:href="img/sprite_auto.svg#icon-seek"></use>
+        </svg>
         <label for="seek" class="visually-hidden">строка поиска</label>
         <input type="text" name="seek" id="seek" placeholder="Type here to search">
       </div>
       <a href="index.html">
-        <!-- 1х: 38px; 2x: 76px -->
-        <img class="main-header__logo" src="img/logo.svg" width="66" height="66" alt="Логотип">
+        <svg width="66" height="66" viewBox="0 0 66 66">
+          <use xlink:href="img/sprite_auto.svg#icon-logo" alt="Логотип"></use>
+        </svg>
       </a>
 
       <div class="main-header__wrap-right">
         <a class="main-header__login" href="login-no-js.html">
+          <svg width="20" height="18" viewBox="0 0 20 18">
+            <use xlink:href="img/sprite_auto.svg#icon-login" alt="Вход в личный кабинет"></use>
+          </svg>
           <p>Login</p>
         </a>
         <p>Cart <span>0</span></p>
       </div>
     </div>
     <nav class="main-header__navigation">
-      <ul>
-        <li><a href="catalog.html">What’s new</a></li>
-        <li><a href="catalog.html">Chokers</a></li>
-        <li><a href="">Necklaces</a></li>
-        <li><a href="catalog.html">Rings</a></li>
-        <li><a href="catalog.html">Earrings</a></li>
-      </ul>
+      <div class="container container--air">
+        <div class="main-header__seek main-header__seek--tablet">
+          <svg width="20" height="18" viewBox="0 0 20 18">
+            <use xlink:href="img/sprite_auto.svg#icon-seek"></use>
+          </svg>
+          <label for="seek-tablet" class="visually-hidden">строка поиска</label>
+          <input type="text" name="seek" id="seek-tablet">
+        </div>
+        <ul>
+          <li><a href="catalog.html">What’s new</a></li>
+          <li><a href="catalog.html">Chokers</a></li>
+          <li><a href="card.html">Necklaces</a></li>
+          <li><a href="catalog.html">Rings</a></li>
+          <li><a href="catalog.html">Earrings</a></li>
+        </ul>
+        <ul class="main-header__pad-menu">
+          <li><a href="about_us.html">About CH</a></li>
+          <li><a href="stores_hours.html">Stores & Hours</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+          <li><a href="login-no-js.html">Login</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
     <h1 class="visually-hidden">Карточка товара</h1>
-    <section class="card container container--air">
+    <section class="card container container--air card--menu">
       <div class="card__wrapper">
         <div class="card__photos">
           <ul class="card__small">
@@ -232,12 +256,33 @@
         </ul>
       </div>
       <ul class="footer__socials">
-        <li><a href="https://www.facebook.com/htmlacademy" class="footer__social footer__social--facebook">Facebook</a>
+        <li><a href="https://www.facebook.com/htmlacademy" class="footer__social footer__social--facebook">
+            <svg width="8" height="15" viewBox="0 0 8 15">
+              <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+            </svg>
+            Facebook
+          </a>
         </li>
-        <li><a href="https://www.instagram.com/htmlacademy" class="footer__social footer__social--instagram">Instagram</a>
+        <li><a href="https://www.instagram.com/htmlacademy" class="footer__social footer__social--instagram">
+            <svg width="15" height="15" viewBox="0 0 15 15">
+              <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+            </svg>
+            Instagram
+          </a>
         </li>
-        <li><a href="https://www.pinterest.com/htmlacademy" class="footer__social footer__social--pinterest">Pinterest</a></li>
-        <li><a href="https://www.twitter.com/htmlacademy" class="footer__social footer__social--twitter">Twitter</a>
+        <li><a href="https://www.pinterest.com/htmlacademy" class="footer__social footer__social--pinterest">
+            <svg width="15" height="15" viewBox="0 0 15 15">
+              <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+            </svg>
+            Pinterest
+          </a>
+        </li>
+        <li><a href="https://www.twitter.com/htmlacademy" class="footer__social footer__social--twitter">
+            <svg width="15" height="15" viewBox="0 0 15 15">
+              <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+            </svg>
+            Twitter
+          </a>
         </li>
       </ul>
     </div>
@@ -309,7 +354,6 @@
       <button class="login__close" type="reset" aria-label="закрыть"></button>
     </form>
   </section>
-
   <script src="js/main.js"></script>
 </body>
 

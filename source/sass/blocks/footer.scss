@@ -146,34 +146,9 @@
     grid-area: socials;
   }
 
-  &::after {
-    content: "";
+  svg {
     position: absolute;
     left: -20px;
-    top: 5px;
-    width: 15px;
-    height: 15px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  &--facebook::after {
-    width: 8px;
-    background-image: url("../img/facebook.svg");
-  }
-
-  &--instagram::after {
-    background-image: url("../img/instagram.svg");
-  }
-
-  &--pinterest::after {
-    background-image: url("../img/pinterest.svg");
-  }
-
-  &--twitter::after {
-    width: 13px;
-    background-image: url("../img/twitter.svg");
   }
 
   &:hover,

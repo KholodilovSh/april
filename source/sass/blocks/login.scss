@@ -87,43 +87,7 @@
 }
 
 .login__close {
-  position: absolute;
-  top: 20px;
-  right: 26px;
-  width: 33px;
-  height: 33px;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 5px;
-    width: 23px;
-    height: 2px;
-    background-color: $letter;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:hover::after {
-    transform: scale(1.2)  rotate(-45deg);
-    opacity: 0.5;
-  }
-
-  &:hover::before {
-    transform: scale(1.2)  rotate(45deg);
-    opacity: 0.5;
-  }
+  @include close-button;
 }
 
 .login__no-account {

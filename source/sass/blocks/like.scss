@@ -3,7 +3,7 @@
   margin-bottom: 130px;
 
   @include header-subheader;
-  @include under-line;
+  @include under-line-h3;
 
   ul {
     display: flex;
@@ -13,6 +13,11 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 }
 

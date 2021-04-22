@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HtmlAcademy, Accelerator, Site 'Jewellery'">
+  <title>Jewellery</title>
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="">
+</head>
+
+<body>
+  <section class="gallery gallery--no-js">
+    <a href="index.html">
+      <svg class="gallery__logo" width="30" height="30" viewBox="0 0 30 30">
+        <use xlink:href="img/sprite_auto.svg#icon-logo" alt="Логотип - на главную"></use>
+      </svg>
+    </a>
+    <h1 class="visually-hidden">Фильтр товаров</h1>
+    <div class="gallery__wrapper container container--air">
+      <form class="gallery__filter gallery__filter--no-js" action="https://echo.htmlacademy.ru/courses" method="post">
+        <ul>
+          <li class="gallery__item">
+            <h4>Product</h4>
+            <div id="product-list" class="gallery__filter-item">
+              <input type="checkbox" name="products" value="necklaces" id="filter-necklaces" class="visually-hidden" checked="">
+              <label for="filter-necklaces">Necklaces</label>
+
+              <input type="checkbox" name="products" value="chokers" id="filter-chokers" class="visually-hidden" checked="">
+              <label for="filter-chokers">Chokers</label>
+
+              <input type="checkbox" name="products" value="rings" id="filter-rings" class="visually-hidden">
+              <label for="filter-rings">Rings</label>
+
+              <input type="checkbox" name="products" value="earrings" id="filter-earrings" class="visually-hidden" checked="">
+              <label for="filter-earrings">Earrings</label>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <h4>Material</h4>
+            <div id="material-list" class="gallery__filter-item">
+              <input type="checkbox" name="materials" value="gold" id="filter-gold" class="visually-hidden" checked="">
+              <label for="filter-gold">Gold</label>
+
+              <input type="checkbox" name="materials" value="silver" id="filter-silver" class="visually-hidden" checked="">
+              <label for="filter-silver">Silver</label>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <h4>Collection</h4>
+            <div id="collection-list" class="gallery__filter-item">
+              <input type="checkbox" name="collections" value="pink-flamingo" id="filter-pink-flamingo" class="visually-hidden" checked="">
+              <label for="filter-pink-flamingo">Pink flamingo</label>
+
+              <input type="checkbox" name="collections" value="dreams" id="filter-dreams" class="visually-hidden" checked="">
+              <label for="filter-dreams">Dreams</label>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <h4>Price</h4>
+            <div class="gallery__filter-item gallery__slider">
+              <p class="gallery__price gallery__price--low">$ 55</p>
+              <p class="gallery__price gallery__price--high">$ 155</p>
+            </div>
+          </li>
+        </ul>
+        <button class="gallery__filter-submit button" type="submit">Apply</button>
+        <button class="gallery__filter-reset button" type="reset">Clear All</button>
+        <a class="gallery__close" href="catalog.html" aria-label="закрыть"></a>
+      </form>
+
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -10,6 +10,10 @@
     font-size: 34px;
     line-height: 130%;
     letter-spacing: 0.03em;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 40px;
+    }
   }
 
   ul {
@@ -20,6 +24,10 @@
   @media (max-width: $tablet-width-only) {
     margin-bottom: 84px;
     max-width: 678px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 70px;
   }
 }
 
@@ -45,42 +53,23 @@
     @media (max-width: $tablet-width-only) {
       margin-left: 50px;
     }
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 25px;
+      width: 182px;
+      font-size: 16px;
+      line-height: 140%;
+    }
   }
 
   @include close-open;
-  // h4:hover {
-  //   cursor: pointer;
-  //   color: red;
-  // }
 
-  // &--closed {
-  //   p {
-  //     display: none;
-  //   }
-
-  //   h4::after {
-  //     content: "";
-  //     position: absolute;
-  //     top: 50px;
-  //     right: 60px;
-  //     width: 16px;
-  //     height: 9px;
-  //     background-image: url("../img/closed.svg");
-  //   }
-  // }
-
-  // &--opened {
-  //   h4::after {
-  //     content: "";
-  //     position: absolute;
-  //     top: 50px;
-  //     right: 60px;
-  //     width: 16px;
-  //     height: 9px;
-  //     background-image: url("../img/closed.svg");
-  //     transform: rotate(180deg);
-  //   }
-  // }
+  @media (max-width: $mobile-width-only) {
+    h4::after {
+      top: 30px;
+      right: 20px;
+    }
+  }
 
   p {
     margin-left: 50px;
@@ -93,5 +82,17 @@
     @media (max-width: $tablet-width-only) {
       margin-top: 35px;
     }
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 25px;
+      width: 204px;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 22px;
+    padding-bottom: 25px;
   }
 }

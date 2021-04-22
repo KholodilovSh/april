@@ -11,9 +11,57 @@
   const faqQuestionArray = document.querySelectorAll('.faq__question');
   const galleryFilter = document.querySelector('.gallery__filter');
   const galleryItems = document.querySelectorAll('.gallery__item');
+  const filterButton = document.querySelector('.gallery__show-filter');
+  const filterShow = document.querySelector('.gallery--js');
+  const menuButton = document.querySelector('.main-header__button');
+  const menuNavigation = document.querySelector('.main-header__navigation');
+  const promo = document.querySelector('.promo');
+  const card = document.querySelector('.card');
 
   let onClickMainHeaderLogin;
   let onClickCardButton;
+  let onClickFilterButton;
+
+  if (menuButton && menuNavigation) {
+    menuNavigation.classList.add('main-header__navigation--closed');
+
+    if (promo) {
+      promo.classList.remove('promo--menu');
+    }
+
+    if (card) {
+      card.classList.remove('card--menu');
+    }
+
+    const onClickMenuButton = function () {
+
+      const openMenu = menuNavigation.classList.contains('main-header__navigation--closed');
+
+      if (openMenu) {
+        menuNavigation.classList.remove('main-header__navigation--closed');
+      } else {
+        menuNavigation.classList.add('main-header__navigation--closed');
+      }
+
+      if (promo) {
+        if (openMenu) {
+          promo.classList.add('promo--menu');
+        } else {
+          promo.classList.remove('promo--menu');
+        }
+      }
+
+      if (card) {
+        if (openMenu) {
+          card.classList.add('card--menu');
+        } else {
+          card.classList.remove('card--menu');
+        }
+      }
+    };
+
+    menuButton.addEventListener('click', onClickMenuButton);
+  }
 
   if (login && mainHeaderLogin) {
 
@@ -155,6 +203,62 @@
 
     cardButton.addEventListener('click', onClickCardButton);
   }
+
+  if (filterButton && filterShow) {
+
+    const onEscapeModalMenu = function (evt) {
+      if (evt.key === 'Escape') {
+        closeForm();
+      }
+    };
+
+    const onClickOverlay = function () {
+      closeForm();
+    };
+
+    const onClickMenuClose = function () {
+      closeForm();
+    };
+
+    const closeForm = function () {
+      filterShow.classList.remove('gallery--show');
+      document.body.classList.remove('body--overflow-hidden');
+      galleryClose.removeEventListener('click', onClickMenuClose);
+      filterShow.removeEventListener('click', onClickOverlay);
+
+      if (overlay) {
+        overlay.classList.remove('overlay--show');
+        overlay.removeEventListener('click', onClickOverlay);
+      }
+
+      filterButton.addEventListener('click', onClickFilterButton);
+    };
+
+    const galleryClose = filterShow.querySelector('.gallery__close');
+
+    onClickFilterButton = function (evtClick) {
+
+      if (evtClick) {
+        evtClick.preventDefault();
+      }
+
+      filterButton.removeEventListener('click', onClickFilterButton);
+
+      filterShow.classList.add('gallery--show');
+      document.body.classList.add('body--overflow-hidden');
+
+      galleryClose.addEventListener('click', onClickMenuClose);
+      document.addEventListener('keydown', onEscapeModalMenu);
+
+      if (overlay) {
+        overlay.classList.add('overlay--show');
+        overlay.addEventListener('click', onClickOverlay);
+      }
+    };
+
+    filterButton.addEventListener('click', onClickFilterButton);
+  }
+
 
   if (faqQuestions && faqQuestionArray) {
     for (let i = 0; i < faqQuestionArray.length; i++) {

@@ -319,8 +319,10 @@
   <footer class="footer">
     <div class="footer__wrapper container container--air">
       <div class="footer__email">
-        <h3>The good stuff in your inbox</h3>
-        <h4>News and updates from CH. No spam, we promise.</h4>
+        <div class="footer__email-header">
+          <h3>The good stuff in your inbox</h3>
+          <h4>News and updates from CH. No spam, we promise.</h4>
+        </div>
         <div class="footer__email-wrapper">
           <label for="your-email" class="visually-hidden">строка поиска</label>
           <input type="text" name="email" id="your-email" placeholder="Your E-mail">
@@ -330,13 +332,16 @@
       <div class="footer__other">
         <ul>
           <li><a href="">Ordering & Payment</a></li>
-          <li><a href="">About CH</a></li>
           <li><a href="">Terms & Conditions</a></li>
-          <li><a href="">Stores & Hours</a></li>
           <li><a href="">Returns & Exchanges</a></li>
-          <li><a href="">Jobs</a></li>
           <li><a href="">Delivery</a></li>
-          <li><a href="">Contact Us</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="">About CH</a></li>
+           <li><a href="">Stores & Hours</a></li>
+           <li><a href="">Jobs</a></li>
+           <li><a href="">Contact Us</a></li>
         </ul>
       </div>
       <ul class="footer__socials">
@@ -344,28 +349,28 @@
             <svg width="8" height="15" viewBox="0 0 8 15">
               <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
             </svg>
-            Facebook
+            <span>Facebook</span>
           </a>
         </li>
         <li><a href="https://www.instagram.com/htmlacademy" class="footer__social footer__social--instagram">
             <svg width="15" height="15" viewBox="0 0 15 15">
               <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
             </svg>
-            Instagram
+            <span>Instagram</span>
           </a>
         </li>
         <li><a href="https://www.pinterest.com/htmlacademy" class="footer__social footer__social--pinterest">
             <svg width="15" height="15" viewBox="0 0 15 15">
               <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
             </svg>
-            Pinterest
+            <span>Pinterest</span>
           </a>
         </li>
         <li><a href="https://www.twitter.com/htmlacademy" class="footer__social footer__social--twitter">
             <svg width="15" height="15" viewBox="0 0 15 15">
               <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
             </svg>
-            Twitter
+            <span>Twitter</span>
           </a>
         </li>
       </ul>

@@ -21,6 +21,12 @@
 .footer__email-header {
   width: 407px;
 
+  @media (max-width: $mobile-width-only) {
+    padding-top: 60px;
+    padding-right: 68px;
+    width: 100%;
+  }
+
   h3 {
     margin: 0;
     font-family: "Cormorant Garamond", "Times New Roman", serif;
@@ -30,6 +36,10 @@
 
     @media (max-width: $tablet-width-only) {
       margin-bottom: 25px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 30px;
     }
   }
 
@@ -44,6 +54,11 @@
 
     @media (max-width: $tablet-width-only) {
       width: 100%;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 50px;
+      text-align: left;
     }
   }
 }
@@ -63,6 +78,10 @@
     &:focus,
     &:hover {
       opacity: 0.7;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      width: 60%;
     }
   }
 
@@ -85,6 +104,10 @@
       background-size: cover;
       background-image: url("../img/next-white.svg");
     }
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 7px;
+    }
   }
 }
 
@@ -102,6 +125,11 @@
       "other socials";
     gap: 50px;
     margin-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
     margin-bottom: 60px;
   }
 }
@@ -109,6 +137,10 @@
 .footer__other {
   @media (max-width: $tablet-width-only) {
     grid-area: other;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 50px;
   }
 
   ul {
@@ -119,6 +151,11 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
+
+    @media (max-width: $mobile-width-only) {
+      display: block;
+      margin-bottom: 50px;
+    }
   }
 
   li {
@@ -130,25 +167,39 @@
     &:active {
       opacity: 0.3;
     }
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 30px;
+    }
   }
 }
 
-.footer__socials li {
-  position: relative;
-  margin-bottom: 30px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
+.footer__socials {
+  li {
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+
+    li {
+      margin-right: 30px;
+    }
+  }
 }
 
 .footer__social {
-  @media (max-width: $tablet-width-only) {
-    grid-area: socials;
-  }
-
   svg {
     position: absolute;
     left: -20px;
+
+    @media (max-width: $mobile-width-only) {
+      left: 0;
+    }
   }
 
   &:hover,
@@ -158,5 +209,15 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    grid-area: socials;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    span {
+      display: none;
+    }
   }
 }

@@ -38,7 +38,7 @@
       const openMenu = menuNavigation.classList.contains('main-header__navigation--closed');
 
       if (openMenu) {
-        menuNavigation.classList.remove('main-header__navigation--closed')
+        menuNavigation.classList.remove('main-header__navigation--closed');
       } else {
         menuNavigation.classList.add('main-header__navigation--closed');
       }

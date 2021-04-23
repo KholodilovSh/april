@@ -19,6 +19,12 @@
     margin-top: 80px;
     margin-bottom: 80px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    h3 {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .like__cards {
@@ -34,6 +40,27 @@
 
   h4 {
     margin: 0;
+  }
+
+  li {
+    width: 23%;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    li {
+      width: 47.8%;
+    }
+
+    & li:nth-child(3n),
+    & li:last-child {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    li {
+      width: 44.8%;
+    }
   }
 }
 

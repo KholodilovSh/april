@@ -19,7 +19,7 @@
   <header class="main-header">
     <h1 class="visually-hidden">All Jewellery</h1>
     <div class="main-header__wrap container container--air">
-      <button class="main-header__button mmain-header__button--no-js" type="button">
+      <button class="main-header__button" type="button">
       </button>
       <div class="main-header__seek">
         <svg width="20" height="18" viewBox="0 0 20 18">
@@ -30,14 +30,14 @@
       </div>
       <a href="index.html">
         <svg width="66" height="66" viewBox="0 0 66 66">
-          <use xlink:href="img/sprite_auto.svg#icon-logo" alt="Логотип"></use>
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
         </svg>
       </a>
 
       <div class="main-header__wrap-right">
         <a class="main-header__login" href="login-no-js.html">
           <svg width="20" height="18" viewBox="0 0 20 18">
-            <use xlink:href="img/sprite_auto.svg#icon-login" alt="Вход в личный кабинет"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-login"></use>
           </svg>
           <p>Login</p>
         </a>
@@ -124,7 +124,6 @@
               <!-- 1х: 290px; 2x: 580px -->
               <img src="img/necklace-detail-mobile@1x.jpg" srcset="img/necklace-detail-mobile@2x.jpg 2x" width="470" height="435" alt="Ожерелье для детального осмотра">
             </picture>
-            
           </div>
         </div>
         <div class="card__description">
@@ -488,11 +487,11 @@
     <h1>Log In</h1>
     <form class="login__form" action="https://echo.htmlacademy.ru/courses" method="post">
       <div class="login__email">
-        <label for="login-email" class="visually-hidden">ваш email</label>
+        <label class="visually-hidden">ваш email</label>
         <input type="email" name="login-email" id="email" placeholder="Your E-mail" required="">
       </div>
       <div class="login__text">
-        <label for="login-text" class="visually-hidden">пароль</label>
+        <label class="visually-hidden">пароль</label>
         <input type="password" name="login-password" id="password" placeholder="Password" required="">
       </div>
       <p>Forgot your password?</p>

@@ -22,6 +22,113 @@
   let onClickCardButton;
   let onClickFilterButton;
 
+  new window.Swiper('.image-slider', {
+
+    pagination: {
+      el: '.swiper-pagination',
+
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+
+    navigation: {
+      nextEl: '.image-slider__next',
+      prevEl: '.image-slider__previous',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        pagination: {
+          type: 'fraction',
+
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+            ' of ' +
+            '<span class="' + totalClass + '"></span>';
+          }
+        },
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2
+      },
+      // when window width is >= 480px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2
+      },
+      // when window width is >= 900px
+      900: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4
+      }
+    }
+  });
+
+  new window.Swiper('.gallery__slider', {
+
+    pagination: {
+      el: '.swiper-pagination',
+
+      type: 'bullet',
+
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+
+    navigation: {
+      nextEl: '.gallery__next',
+      prevEl: '.gallery__previous',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        pagination: {
+          type: 'fraction',
+
+          // renderFraction: function (currentClass, totalClass) {
+          //   return '<span class="' + currentClass + '"></span>' +
+          //   ' of ' +
+          //   '<span class="' + totalClass + '"></span>';
+          // }
+        },
+        slidesPerView: 2,
+        slidesPerColumn: 6,
+        spaceBetween: 30,
+        slidesPerGroup: 2
+      },
+      // when window width is >= 768px
+      450: {
+        pagination: {
+          type: 'bullet',
+        },
+
+        slidesPerView: 3,
+        slidesPerColumn: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 3
+      },
+      // when window width is >= 900px
+      // 900: {
+      //   pagination: {
+      //     type: 'bullet',
+      //   },
+
+      //   slidesPerView: 3,
+      //   slidesPerColumn: 4,
+      //   spaceBetween: 30,
+      //   slidesPerGroup: 3
+      // }
+    }
+  });
+
   if (menuButton && menuNavigation) {
     menuNavigation.classList.add('main-header__navigation--closed');
 
@@ -38,7 +145,7 @@
       const openMenu = menuNavigation.classList.contains('main-header__navigation--closed');
 
       if (openMenu) {
-        menuNavigation.classList.remove('main-header__navigation--closed')
+        menuNavigation.classList.remove('main-header__navigation--closed');
       } else {
         menuNavigation.classList.add('main-header__navigation--closed');
       }

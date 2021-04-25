@@ -1,1 +1,4 @@
 source/sass/normalize.scss
+source/sass/swiper*.scss
+source/sass/pagination.scss
+source/sass/navigation.scss

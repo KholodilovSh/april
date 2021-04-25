@@ -113,6 +113,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 130%;
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 49px;
+    }
   }
 
   h4 {
@@ -125,6 +129,11 @@
     @media (max-width: $tablet-width-only) {
       margin-left: 85px;
       margin-right: 85px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-left: 63px;
+      margin-right: 63px;
     }
   }
 

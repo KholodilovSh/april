@@ -2,52 +2,6 @@
 
 (function () {
 
-  const swiper = new window.Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-
-    // Default parameters
-    slidesPerView: 1,
-    spaceBetween: 10,
-    // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 40
-      }
-    }
-  });
-
-  const swiperContainer = document.querySelector('.swiper-container').swiper;
-
   const overlay = document.querySelector('.overlay');
   const login = document.querySelector('.login');
   const mainHeaderLogin = document.querySelector('.main-header__login');
@@ -68,9 +22,112 @@
   let onClickCardButton;
   let onClickFilterButton;
 
-  if (swiperContainer) {
-    swiperContainer.slideNext();
-  }
+  new window.Swiper('.image-slider', {
+
+    pagination: {
+      el: '.swiper-pagination',
+
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+
+    navigation: {
+      nextEl: '.image-slider__next',
+      prevEl: '.image-slider__previous',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        pagination: {
+          type: 'fraction',
+
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+            ' of ' +
+            '<span class="' + totalClass + '"></span>';
+          }
+        },
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2
+      },
+      // when window width is >= 480px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2
+      },
+      // when window width is >= 900px
+      900: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4
+      }
+    }
+  });
+
+  new window.Swiper('.gallery__slider', {
+
+    pagination: {
+      el: '.swiper-pagination',
+
+      type: 'bullet',
+
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+
+    navigation: {
+      nextEl: '.gallery__next',
+      prevEl: '.gallery__previous',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        pagination: {
+          type: 'fraction',
+
+          // renderFraction: function (currentClass, totalClass) {
+          //   return '<span class="' + currentClass + '"></span>' +
+          //   ' of ' +
+          //   '<span class="' + totalClass + '"></span>';
+          // }
+        },
+        slidesPerView: 2,
+        slidesPerColumn: 6,
+        spaceBetween: 30,
+        slidesPerGroup: 2
+      },
+      // when window width is >= 768px
+      450: {
+        pagination: {
+          type: 'bullet',
+        },
+
+        slidesPerView: 3,
+        slidesPerColumn: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 3
+      },
+      // when window width is >= 900px
+      // 900: {
+      //   pagination: {
+      //     type: 'bullet',
+      //   },
+
+      //   slidesPerView: 3,
+      //   slidesPerColumn: 4,
+      //   spaceBetween: 30,
+      //   slidesPerGroup: 3
+      // }
+    }
+  });
 
   if (menuButton && menuNavigation) {
     menuNavigation.classList.add('main-header__navigation--closed');

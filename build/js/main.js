@@ -75,7 +75,7 @@
     pagination: {
       el: '.swiper-pagination',
 
-      type: 'bullet',
+      // type: 'bullet',
 
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
@@ -91,15 +91,15 @@
     breakpoints: {
       // when window width is >= 320px
       320: {
-        pagination: {
-          type: 'fraction',
+        // pagination: {
+        //   type: 'fraction',
 
-          // renderFraction: function (currentClass, totalClass) {
-          //   return '<span class="' + currentClass + '"></span>' +
-          //   ' of ' +
-          //   '<span class="' + totalClass + '"></span>';
-          // }
-        },
+        //   // renderFraction: function (currentClass, totalClass) {
+        //   //   return '<span class="' + currentClass + '"></span>' +
+        //   //   ' of ' +
+        //   //   '<span class="' + totalClass + '"></span>';
+        //   // }
+        // },
         slidesPerView: 2,
         slidesPerColumn: 6,
         spaceBetween: 30,
@@ -107,26 +107,15 @@
       },
       // when window width is >= 768px
       450: {
-        pagination: {
-          type: 'bullet',
-        },
+        // pagination: {
+        //   type: 'bullet',
+        // },
 
         slidesPerView: 3,
         slidesPerColumn: 4,
         spaceBetween: 30,
         slidesPerGroup: 3
       },
-      // when window width is >= 900px
-      // 900: {
-      //   pagination: {
-      //     type: 'bullet',
-      //   },
-
-      //   slidesPerView: 3,
-      //   slidesPerColumn: 4,
-      //   spaceBetween: 30,
-      //   slidesPerGroup: 3
-      // }
     }
   });
 

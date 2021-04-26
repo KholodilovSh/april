@@ -4,6 +4,7 @@
 
   const overlay = document.querySelector('.overlay');
   const login = document.querySelector('.login');
+  const mainHeader = document.querySelector('.main-header');
   const mainHeaderLogin = document.querySelector('.main-header__login');
   const cardButton = document.querySelector('.card__button');
   const cart = document.querySelector('.cart');
@@ -129,6 +130,14 @@
     }
   });
 
+  if (mainHeader) {
+    mainHeader.classList.remove('main-header--opened');
+  }
+
+  if (menuButton) {
+    menuButton.classList.remove('main-header__button--opened');
+  }
+
   if (menuButton && menuNavigation) {
     menuNavigation.classList.add('main-header__navigation--closed');
 
@@ -146,8 +155,18 @@
 
       if (openMenu) {
         menuNavigation.classList.remove('main-header__navigation--closed');
+        menuButton.classList.add('main-header__button--opened');
       } else {
         menuNavigation.classList.add('main-header__navigation--closed');
+        menuButton.classList.remove('main-header__button--opened');
+      }
+
+      if (mainHeader) {
+        if (openMenu) {
+          mainHeader.classList.add('main-header--opened');
+        } else {
+          mainHeader.classList.remove('main-header--opened');
+        }
       }
 
       if (promo) {

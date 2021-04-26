@@ -113,18 +113,19 @@
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 500px 380px 115px;
+  grid-template-columns: 500px 177px 136px 115px;
   justify-content: space-between;
-
   margin-top: 100px;
   margin-bottom: 100px;
 
   @media (max-width: $tablet-width-only) {
     grid-template-columns: none;
-    grid-template-areas: "email email"
-      "other socials";
-    gap: 50px;
+    grid-template-areas: "email email email"
+      "main add socials";
+    column-gap: 86px;
+    row-gap: 50px;
     margin-top: 60px;
+    margin-bottom: 0;
     padding-bottom: 60px;
   }
 
@@ -136,7 +137,13 @@
 
 .footer__other {
   @media (max-width: $tablet-width-only) {
-    grid-area: other;
+    &--main {
+      grid-area: main;
+    }
+
+    &--pad {
+      grid-area: add;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
@@ -144,13 +151,14 @@
   }
 
   ul {
-    display: grid;
-    grid-template-columns: 220px 220px;
-    row-gap: 30px;
-    column-gap: 18px;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
+
+    li {
+      margin-bottom: 30px;
+    }
+
 
     @media (max-width: $mobile-width-only) {
       display: block;

@@ -12,11 +12,30 @@
 
   @media (max-width: $tablet-width-only) {
     border: none;
+
+    &--opened {
+      background-color: $menu-background;
+
+      .main-header__button {
+        background-color: $menu-background;
+        color: $white;
+      }
+
+      .main-header__logo,
+      .main-header__login svg {
+        color: $white;
+      }
+
+      .main-header__login svg {
+        fill: $menu-background;
+      }
+    }
   }
 }
 
 .main-header__wrap {
   margin-top: 30px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +43,8 @@
 }
 
 .main-header__logo {
+  color: $menu-background;
+
   @media (max-width: $mobile-width-only) {
     width: 52px;
     height: 52px;
@@ -49,11 +70,12 @@
 
   svg {
     display: none;
+    color: $letter;
 
     @media (max-width: $tablet-width-only) {
       display: block;
       position: absolute;
-      top: 0;
+      top: -10px;
       right: 0;
       width: 20px;
       height: 19px;
@@ -76,7 +98,7 @@
   ul {
     display: flex;
     justify-content: space-between;
-    padding: 25px 0 25px 0;
+    padding: 9px 0 25px 0;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -101,6 +123,7 @@
   @media (max-width: $tablet-width-only) {
     color: $white;
     background-color: $menu-background;
+    border: none;
 
     &--closed {
       display: none;
@@ -160,9 +183,13 @@
   svg {
     position: absolute;
     left: 14px;
-    top: 14px;
+    top: 4px;
     width: 14px;
     height: 14px;
+
+    @media (max-width: $tablet-width-only) {
+      top: 14px;
+    }
   }
 
   @media (max-width: $tablet-width-only) {
@@ -224,6 +251,13 @@
       box-shadow:
         0 7px 0 0 $black,
         0 14px 0 0 $black;
+    }
+
+    &--opened::before {
+      background-color: $white;
+      box-shadow:
+        0 7px 0 0 $white,
+        0 14px 0 0 $white;
     }
 
     &--clicked {

@@ -22,7 +22,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-bottom: 84px;
+    margin-bottom: 73px;
     max-width: 678px;
   }
 
@@ -80,7 +80,9 @@
     line-height: 130%;
 
     @media (max-width: $tablet-width-only) {
-      margin-top: 35px;
+      margin-top: 28px;
+      max-width: 537px;
+      letter-spacing: 0.01em;
     }
 
     @media (max-width: $mobile-width-only) {

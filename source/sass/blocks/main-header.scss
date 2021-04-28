@@ -47,6 +47,10 @@
   margin-bottom: -30px;
   color: $menu-background;
 
+  @media (max-width: $tablet-width-only) {
+    margin-right: 31px;
+  }
+
   @media (max-width: $mobile-width-only) {
     width: 52px;
     height: 52px;
@@ -55,6 +59,7 @@
 
 .main-header__wrap-right {
   position: relative;
+  top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -232,6 +237,7 @@
   @media (max-width: $tablet-width-only) {
     display: block;
     position: relative;
+    top: 13px;
     width: 50px;
     height: 50px;
     cursor: pointer;

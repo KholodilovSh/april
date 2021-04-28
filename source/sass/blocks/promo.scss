@@ -14,7 +14,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-top: 130px;
+    margin-top: 133px;
     background-image: url("../img/main-tablet@1x.jpg");
     box-shadow: none;
 
@@ -38,6 +38,7 @@
   h2,
   h3 {
     position: relative;
+    left: -8px;
     text-align: center;
     color: $white;
   }
@@ -49,6 +50,11 @@
     line-height: 130%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media (max-width: $tablet-width-only) {
+      left: 0;
+      letter-spacing: 0;
+    }
 
     @media (max-width: $mobile-width-only) {
       margin: 200px 0 16px 0;
@@ -62,6 +68,10 @@
     font-weight: 400;
     font-size: 38px;
     line-height: 130%;
+
+    @media (max-width: $tablet-width-only) {
+      left: 0;
+    }
 
     @media (max-width: $mobile-width-only) {
       font-size: 34px;

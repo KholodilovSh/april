@@ -11,7 +11,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-bottom: 80px;
+    margin-bottom: 71px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -74,6 +74,10 @@
 
       @media (max-width: $tablet-width-only) {
         width: 339px;
+
+        p {
+          padding-top: 85px;
+        }
       }
     }
   }
@@ -115,6 +119,11 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 130%;
+
+    @media (max-width: $tablet-width-only) {
+      padding-top: 68px;
+      margin-bottom: 13px;
+    }
 
     @media (max-width: $mobile-width-only) {
       padding-top: 49px;

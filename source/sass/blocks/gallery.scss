@@ -52,6 +52,10 @@
     margin: auto;
     display: none;
   }
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 50px;
+  }
 }
 
 .gallery__logo {
@@ -250,6 +254,10 @@
   height: 1548px;
   width: 100%;
 
+  @media (max-width: $tablet-width-only) {
+    height: 1292px;
+  }
+
   @media (max-width: $slider-width) {
     height: 1704px;
   }
@@ -298,8 +306,10 @@
     margin-bottom: 8px;
 
     @media (max-width: $tablet-width-only) {
+      position: relative;
+      left: -5px;
       margin-top: 19px;
-      margin-bottom: 21px;
+      margin-bottom: 10px;
     }
 
     @media (max-width: $slider-width) {
@@ -310,6 +320,10 @@
 
   h4 {
     margin: 0;
+
+    @media (max-width: $tablet-width-only) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -323,6 +337,10 @@
   &:active,
   &:hover {
     opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    bottom: -4px;
   }
 
   @media (max-width: $slider-width) {

@@ -15,13 +15,17 @@
   @media (max-width: $tablet-width-only) {
     grid-area: email;
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 47px;
+  }
 }
 
 .footer__email-header {
   width: 412px;
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-right: 68px;
     width: 100%;
   }
@@ -39,7 +43,7 @@
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 30px;
+      margin-bottom: 16px;
     }
   }
 
@@ -59,7 +63,8 @@
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 50px;
+      margin-left: -2px;
+      margin-bottom: 45px;
       text-align: left;
     }
   }
@@ -90,6 +95,8 @@
     }
 
     @media (max-width: $mobile-width-only) {
+      margin-bottom: 9px;
+      margin-left: -2px;
       width: 60%;
     }
   }
@@ -142,6 +149,8 @@
 
   @media (max-width: $mobile-width-only) {
     display: block;
+    margin-left: 5%;
+    margin-top: 54px;
     margin-bottom: 60px;
   }
 }
@@ -163,7 +172,10 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 50px;
+    &--pad {
+      position: relative;
+      top: -9px;
+    }
   }
 
   ul {
@@ -187,6 +199,7 @@
 
     @media (max-width: $mobile-width-only) {
       display: block;
+      margin-top: 0;
       margin-bottom: 50px;
     }
   }
@@ -260,8 +273,21 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    margin-left: 15px;
+
     span {
       display: none;
+    }
+
+    svg {
+      left: -30px;
+      top: -12px;
+      width: 21px;
+      height: 21px;
+    }
+
+    &--facebook svg {
+      width: 12px;
     }
   }
 }

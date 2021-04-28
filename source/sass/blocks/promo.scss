@@ -28,6 +28,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    margin-top: 93px;
     background-image: url("../img/main-mobile@1x.jpg");
 
     @media (min-resolution: 1.5dppx) {
@@ -57,7 +58,7 @@
     }
 
     @media (max-width: $mobile-width-only) {
-      margin: 200px 0 16px 0;
+      margin: 189px 0 -7px 0;
       font-size: 38px;
     }
   }

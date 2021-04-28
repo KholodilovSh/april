@@ -93,10 +93,20 @@
       margin-bottom: 3px;
       font-size: 34px;
       line-height: 130%;
+
+      @media (max-width: $mobile-width-only) {
+        margin-top: 79px;
+        margin-bottom: 0;
+      }
     }
 
     h3 {
       font-size: 22px;
+
+      @media (max-width: $mobile-width-only) {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
     }
   }
 }

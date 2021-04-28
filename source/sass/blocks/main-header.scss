@@ -34,8 +34,8 @@
 }
 
 .main-header__wrap {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 16px;
+  margin-bottom: 29px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,6 +43,8 @@
 }
 
 .main-header__logo {
+  margin-right: 90px;
+  margin-bottom: -30px;
   color: $menu-background;
 
   @media (max-width: $mobile-width-only) {
@@ -93,12 +95,13 @@
 }
 
 .main-header__navigation {
+  margin-left: 8px;
   border-top: 1px solid $line;
 
   ul {
     display: flex;
     justify-content: space-between;
-    padding: 9px 0 25px 0;
+    padding: 9px 0 19px 0;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -168,7 +171,7 @@
 
 .main-header__seek {
   position: relative;
-  margin-left: 30px;
+  margin-left: -11px;
 
   input {
     border: none;
@@ -182,7 +185,7 @@
 
   svg {
     position: absolute;
-    left: 14px;
+    left: 11px;
     top: 4px;
     width: 14px;
     height: 14px;

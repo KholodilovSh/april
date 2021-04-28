@@ -1,13 +1,13 @@
 .newest {
-  margin-bottom: 130px;
+  margin-bottom: 48px;
 
-  @include header-subheader;
+  @include header-subheader(28px);
 
   span {
     font-size: 42px;
   }
 
-  @include under-line-h3(74px);
+  @include under-line-h3(74px, -6px, 65px);
 
   ul {
     margin: 0;

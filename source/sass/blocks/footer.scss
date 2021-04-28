@@ -7,7 +7,6 @@
 
   ul {
     padding: 0;
-    margin: 0;
     list-style: none;
   }
 }
@@ -19,7 +18,7 @@
 }
 
 .footer__email-header {
-  width: 407px;
+  width: 412px;
 
   @media (max-width: $mobile-width-only) {
     padding-top: 60px;
@@ -33,6 +32,7 @@
     font-weight: 700;
     font-size: 34px;
     line-height: 130%;
+    letter-spacing: 0.02em;
 
     @media (max-width: $tablet-width-only) {
       margin-bottom: 25px;
@@ -44,7 +44,7 @@
   }
 
   h4 {
-    margin: 0 auto 54px auto;
+    margin: 0 auto 34px auto;
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
@@ -70,10 +70,11 @@
   border-bottom: 1px solid $white;
 
   input {
-    margin-bottom: 1px;
+    margin-bottom: 6px;
     border: none;
     color: $white;
     background-color: $black;
+    font-size: 14px;
 
     &:focus,
     &:hover {
@@ -88,7 +89,7 @@
   p {
     position: relative;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
     margin-right: 40px;
     color: $white;
 
@@ -113,9 +114,9 @@
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 500px 177px 136px 115px;
+  grid-template-columns: 500px 178px 136px 115px;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 89px;
   margin-bottom: 100px;
 
   @media (max-width: $tablet-width-only) {
@@ -136,6 +137,10 @@
 }
 
 .footer__other {
+  &--pad {
+    margin-left: -16px;
+  }
+
   @media (max-width: $tablet-width-only) {
     &--main {
       grid-area: main;
@@ -143,6 +148,7 @@
 
     &--pad {
       grid-area: add;
+      margin-left: 0;
     }
   }
 
@@ -151,12 +157,14 @@
   }
 
   ul {
+    margin-left: 10px;
+    margin-top: 8px;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
 
     li {
-      margin-bottom: 30px;
+      margin-bottom: 21px;
     }
 
 
@@ -183,9 +191,12 @@
 }
 
 .footer__socials {
+  margin-top: 7px;
+  margin-left: 29px;
+
   li {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
@@ -203,7 +214,7 @@
 .footer__social {
   svg {
     position: absolute;
-    left: -20px;
+    left: -28px;
 
     @media (max-width: $mobile-width-only) {
       left: 0;

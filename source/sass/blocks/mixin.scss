@@ -1,11 +1,11 @@
-@mixin under-line-h3($length: 80px) {
+@mixin under-line-h3($length: 80px, $bottom: 0, $mb: 60px) {
   h3 {
-    @include under-line($length);
+    @include under-line($length, $bottom, $mb);
   }
 }
 
-@mixin under-line($length: 80px) {
-  margin: 0 0 70px 0;
+@mixin under-line($length: 80px, $bottom: 0, $mb: 60px) {
+  margin: 0 0 $mb 0;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -14,7 +14,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: $bottom;
     height: 1px;
     left: 50%;
     transform: translateX(-50%);
@@ -23,7 +23,7 @@
   }
 }
 
-@mixin header-subheader {
+@mixin header-subheader($mb: 26px) {
   h2,
   h3 {
     position: relative;
@@ -32,7 +32,7 @@
   }
 
   h2 {
-    margin: 0 0 35px 0;
+    margin: 0 0 $mb 0;
     font-weight: 700;
     font-size: 34px;
     line-height: 130%;

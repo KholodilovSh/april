@@ -1,8 +1,8 @@
 .blog {
-  margin-bottom: 130px;
+  margin-bottom: 121px;
 
-  @include header-subheader;
-  @include under-line-h3(64px);
+  @include header-subheader(20px);
+  @include under-line-h3(64px, -5px, 64px);
 
   ul {
     margin: 0;
@@ -28,7 +28,8 @@
   grid-template-areas: "right corner"
     "left corner";
   grid-template-columns: 1fr 1fr;
-  gap: 2.5%;
+  column-gap: 2.5%;
+  row-gap: 30px;
 
   img {
     display: block;
@@ -48,6 +49,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "image description";
+  height: 300px;
 
   &--left {
     grid-area: left;
@@ -107,7 +109,7 @@
   p {
     padding-top: 71px;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     color: $grey-letter;
     font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
@@ -121,7 +123,9 @@
 
   h4 {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
     font-weight: 600;
     font-size: 26px;
     line-height: 130%;
@@ -137,7 +141,7 @@
     }
   }
 
-  @include under-line-h3(97px);
+  @include under-line-h3(97px, -5px);
 
   h3 {
     margin-bottom: 0;

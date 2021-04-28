@@ -1,11 +1,15 @@
 .image-slider {
   position: relative;
-  margin-top: 118px;
-  margin-bottom: 105px;
+  margin-top: 90px;
+  margin-bottom: 116px;
   padding: 0 0 70px 0;
 
-  @include header-subheader;
-  @include under-line-h3;
+  @include header-subheader(21px);
+  @include under-line-h3(80px,-4px, 63px);
+
+  h2 {
+    letter-spacing: -0.01em;
+  }
 
   .swiper-pagination {
     font-family: "Poppins", "Arial", sans-serif;

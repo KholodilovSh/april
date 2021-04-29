@@ -25,6 +25,10 @@
       margin-left: 8px;
       margin-right: 10px;
     }
+
+    &--menu {
+      margin-top: 915px;
+    }
   }
 }
 
@@ -245,6 +249,7 @@
 .card__conditions {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;

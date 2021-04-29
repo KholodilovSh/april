@@ -14,7 +14,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-top: 130px;
+    margin-top: 127px;
     background-image: url("../img/main-tablet@1x.jpg");
     box-shadow: none;
 
@@ -28,6 +28,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    margin-top: 93px;
     background-image: url("../img/main-mobile@1x.jpg");
 
     @media (min-resolution: 1.5dppx) {
@@ -50,8 +51,13 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
+    @media (max-width: $tablet-width-only) {
+      left: -9px;
+    }
+
     @media (max-width: $mobile-width-only) {
-      margin: 200px 0 16px 0;
+      left: 0;
+      margin: 189px 0 -7px 0;
       font-size: 38px;
     }
   }
@@ -63,7 +69,12 @@
     font-size: 38px;
     line-height: 130%;
 
+    @media (max-width: $tablet-width-only) {
+      left: -9px;
+    }
+
     @media (max-width: $mobile-width-only) {
+      left: 0;
       font-size: 34px;
     }
   }
@@ -82,10 +93,29 @@
       margin-bottom: 3px;
       font-size: 34px;
       line-height: 130%;
+
+      @media (max-width: $tablet-width-only) {
+        left: 0;
+        letter-spacing: -0.01em;
+      }
+
+      @media (max-width: $mobile-width-only) {
+        margin-top: 79px;
+        margin-bottom: 0;
+      }
     }
 
     h3 {
       font-size: 22px;
+
+      @media (max-width: $tablet-width-only) {
+        left: 0;
+      }
+
+      @media (max-width: $mobile-width-only) {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
     }
   }
 }

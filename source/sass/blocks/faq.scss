@@ -12,7 +12,7 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 40px;
+      margin-bottom: 29px;
     }
   }
 
@@ -22,12 +22,17 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-bottom: 84px;
+    margin-bottom: 69px;
     max-width: 678px;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-bottom: 70px;
+    margin-bottom: 56px;
+
+    ul {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
 }
 
@@ -52,17 +57,22 @@
 
     @media (max-width: $tablet-width-only) {
       margin-left: 50px;
+      margin-bottom: -1px;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-left: 25px;
-      width: 182px;
+      margin-left: 23px;
+      width: 207px;
       font-size: 16px;
       line-height: 140%;
     }
   }
 
   @include close-open(50px, 49px);
+
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 45px;
+  }
 
   @media (max-width: $mobile-width-only) {
     h4::after {
@@ -78,21 +88,25 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
+    letter-spacing: 0.01em;
 
     @media (max-width: $tablet-width-only) {
-      margin-top: 35px;
+      margin-top: 26px;
+      max-width: 537px;
+      letter-spacing: 0.01em;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-left: 25px;
-      margin-right: 62px;
+      margin-top: 15px;
+      margin-left: 23px;
+      margin-right: 55px;
       font-size: 14px;
-      line-height: 140%;
+      line-height: 143%;
     }
   }
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 22px;
-    padding-bottom: 25px;
+    padding-top: 18px;
+    padding-bottom: 20px;
   }
 }

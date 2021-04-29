@@ -9,8 +9,8 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-top: 140px;
-    margin-bottom: 80px;
+    margin-top: 157px;
+    margin-bottom: 69px;
 
     &--menu {
       margin-top: 915px;
@@ -18,7 +18,13 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-bottom: 70px;
+    margin-top: 93px;
+    margin-bottom: 43px;
+
+    ul {
+      margin-left: 8px;
+      margin-right: 10px;
+    }
   }
 }
 
@@ -48,7 +54,7 @@
 
   @media (max-width: $mobile-width-only) {
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     width: 100%;
 
     img {
@@ -91,6 +97,10 @@
     font-weight: 700;
     font-size: 34px;
     line-height: 130%;
+
+    @media (max-width: $tablet-width-only) {
+      margin-left: 0;
+    }
   }
 
   p {
@@ -102,8 +112,12 @@
     font-size: 26px;
     line-height: 130%;
 
+    @media (max-width: $tablet-width-only) {
+      margin-left: 0;
+    }
+
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 40px;
+      margin-bottom: 29px;
     }
   }
 
@@ -130,11 +144,21 @@
   h3 {
     padding-left: 5px;
     color: $grey-letter;
+
+    @media (max-width: $tablet-width-only) {
+      padding-left: 0;
+      padding-right: 30px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      padding-right: 34px;
+    }
   }
 
   table {
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin-top: 19px;
+    margin-bottom: 54px;
+    margin-left: 2px;
     width: 100%;
     font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
@@ -146,6 +170,37 @@
       height: 38px;
       border-bottom: 1px solid $line;
     }
+
+    tr:last-child {
+      td {
+        padding-top: 9px;
+      }
+    }
+
+    @media (max-width: $tablet-width-only) {
+      margin-left: 0;
+
+      tr:last-child {
+        padding-top: 12px;
+        padding-left: 5px;
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-top: 21px;
+      margin-bottom: 42px;
+
+      td {
+        height: 39px;
+      }
+
+      tr:last-child {
+        td:first-child {
+          padding-top: 12px;
+          padding-left: 5px;
+        }
+      }
+    }
   }
 }
 
@@ -155,6 +210,7 @@
 
 .card__button {
   position: relative;
+  left: 3px;
   display: block;
   margin-bottom: 17px;
   width: 100%;
@@ -173,12 +229,16 @@
     height: 20px;
     width: 100px;
     top: 50%;
-    left: 52%;
+    left: 51%;
     transform: translateX(-50%) translateY(-50%);
   }
 
+  @media (max-width: $tablet-width-only) {
+    left: 0;
+  }
+
   @media (max-width: $mobile-width-only) {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 

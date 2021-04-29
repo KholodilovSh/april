@@ -52,6 +52,14 @@
     margin: auto;
     display: none;
   }
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 50px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 38px;
+  }
 }
 
 .gallery__logo {
@@ -230,6 +238,10 @@
       transform: translateX(-50%) translateY(-50%);
     }
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 42px;
+  }
 }
 
 .gallery__wrapper {
@@ -250,8 +262,16 @@
   height: 1548px;
   width: 100%;
 
+  @media (max-width: $tablet-width-only) {
+    height: 1292px;
+  }
+
   @media (max-width: $slider-width) {
     height: 1704px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    height: 1484px;
   }
 
   .swiper-slide {
@@ -262,20 +282,27 @@
     }
   }
 
-  .swiper-pagination {
+  .gallery__pagination {
     font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
+
+    span {
+      position: relative;
+      bottom: -15px;
+      padding-left: 3px;
+      padding-right: 10px;
+
+      @media (max-width: $mobile-width-only) {
+        padding-left: 6px;
+        padding-right: 17px;
+      }
+    }
   }
 
   .swiper-pagination-bullet {
     background-color: $white;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
   }
 }
 
@@ -295,28 +322,39 @@
   p {
     padding-left: 8px;
     margin-top: 19px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 
     @media (max-width: $tablet-width-only) {
+      position: relative;
+      left: -5px;
       margin-top: 19px;
-      margin-bottom: 21px;
+      margin-bottom: 7px;
     }
 
     @media (max-width: $slider-width) {
       margin-top: 20px;
       margin-bottom: 15px;
+
+      @media (max-width: $mobile-width-only) {
+        margin-top: 13px;
+        margin-bottom: 12px;
+      }
     }
   }
 
   h4 {
     margin: 0;
+
+    @media (max-width: $tablet-width-only) {
+      font-size: 14px;
+    }
   }
 }
 
 .gallery__previous,
 .gallery__next {
   position: absolute;
-  bottom: 20px;
+  bottom: -4px;
   z-index: 3;
   cursor: pointer;
 

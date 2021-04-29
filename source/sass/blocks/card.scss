@@ -9,8 +9,8 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-top: 163px;
-    margin-bottom: 72px;
+    margin-top: 157px;
+    margin-bottom: 69px;
 
     &--menu {
       margin-top: 915px;
@@ -156,8 +156,9 @@
   }
 
   table {
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin-top: 19px;
+    margin-bottom: 54px;
+    margin-left: 2px;
     width: 100%;
     font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
@@ -168,6 +169,21 @@
     td {
       height: 38px;
       border-bottom: 1px solid $line;
+    }
+
+    tr:last-child {
+      td {
+        padding-top: 9px;
+      }
+    }
+
+    @media (max-width: $tablet-width-only) {
+      margin-left: 0;
+
+      tr:last-child {
+        padding-top: 12px;
+        padding-left: 5px;
+      }
     }
 
     @media (max-width: $mobile-width-only) {
@@ -194,6 +210,7 @@
 
 .card__button {
   position: relative;
+  left: 3px;
   display: block;
   margin-bottom: 17px;
   width: 100%;
@@ -212,8 +229,12 @@
     height: 20px;
     width: 100px;
     top: 50%;
-    left: 52%;
+    left: 51%;
     transform: translateX(-50%) translateY(-50%);
+  }
+
+  @media (max-width: $tablet-width-only) {
+    left: 0;
   }
 
   @media (max-width: $mobile-width-only) {

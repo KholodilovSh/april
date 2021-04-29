@@ -289,18 +289,20 @@
     line-height: 130%;
 
     span {
-      padding-left: 13px;
+      position: relative;
+      bottom: -15px;
+      padding-left: 3px;
       padding-right: 10px;
+
+      @media (max-width: $mobile-width-only) {
+        padding-left: 6px;
+        padding-right: 17px;
+      }
     }
   }
 
   .swiper-pagination-bullet {
     background-color: $white;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
   }
 }
 
@@ -320,13 +322,13 @@
   p {
     padding-left: 8px;
     margin-top: 19px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 
     @media (max-width: $tablet-width-only) {
       position: relative;
       left: -5px;
       margin-top: 19px;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
     }
 
     @media (max-width: $slider-width) {
@@ -352,17 +354,13 @@
 .gallery__previous,
 .gallery__next {
   position: absolute;
-  bottom: 20px;
+  bottom: -4px;
   z-index: 3;
   cursor: pointer;
 
   &:active,
   &:hover {
     opacity: 0.7;
-  }
-
-  @media (max-width: $tablet-width-only) {
-    bottom: -4px;
   }
 
   @media (max-width: $slider-width) {

@@ -41,6 +41,10 @@
   align-items: center;
   height: 85px;
 
+  @media (max-width: $tablet-width-only) {
+    margin-top: 9px;
+  }
+
   @media (max-width: $mobile-width-only) {
     margin-top: -8px;
   }
@@ -63,7 +67,6 @@
 
 .main-header__wrap-right {
   position: relative;
-  top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -86,7 +89,7 @@
     @media (max-width: $tablet-width-only) {
       display: block;
       position: absolute;
-      top: -10px;
+      top: 0;
       right: 0;
       width: 20px;
       height: 19px;

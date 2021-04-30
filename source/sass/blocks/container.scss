@@ -15,5 +15,52 @@
 
   &--air {
     width: 96%;
+
+    @media (max-width: 1170px) {
+      max-width: 1120px;
+    }
+
+    @media (max-width: 1150px) {
+      max-width: 1060px;
+    }
+
+    @media (max-width: 1120px) {
+      max-width: 1020px;
+    }
+
+    @media (max-width: 1020px) {
+      max-width: 970px;
+    }
+
+    @media (max-width: 970px) {
+      max-width: 870px;
+    }
+
+    @media (max-width: 870px) {
+      max-width: 770px;
+    }
+
+    @media (max-width: 770px) {
+      max-width: 670px;
+    }
+  }
+
+  &--popap {
+    max-width: 430px;
+    width: 96%;
+  }
+
+  &--header {
+    width: 88.5%;
+
+    @media (max-width: $tablet-width-only) {
+      max-width: none;
+    }
+  }
+
+  &--blog {
+    @media (max-width: $tablet-width-only) {
+      width: 100%;
+    }
   }
 }

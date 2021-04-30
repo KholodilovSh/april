@@ -77,12 +77,6 @@
   @include close-open(28px, 23px);
 }
 
-.gallery__ranger {
-  position: relative;
-  margin: 0 25px 25px 25px;
-  border-top: 1px solid $main-ground;
-}
-
 .gallery__price {
   position: absolute;
   top: 17px;
@@ -131,8 +125,6 @@
 
   li {
     margin-top: -1px;
-    padding-top: 26px;
-    padding-bottom: 24px;
     border: 1px solid $under-line;
 
     label {
@@ -144,7 +136,9 @@
   }
 
   h4 {
-    margin-left: 25px;
+    padding-left: 25px;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 
   &--close {
@@ -161,7 +155,8 @@
 }
 
 .gallery__filter-item {
-  margin-top: 23px;
+  margin-top: 2px;
+  margin-bottom: 29px;
 
   label {
     position: relative;
@@ -192,6 +187,14 @@
   label:hover,
   label:hover::before {
     opacity: 0.7;
+  }
+
+  &--ranger {
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    border-top: 1px solid $main-ground;
   }
 }
 
@@ -275,10 +278,10 @@
   }
 
   .swiper-slide {
-    height: calc((100% - 168px) / 4);
+    height: 345px; //calc((100% - 168px) / 4);
 
     @media (max-width: $slider-width) {
-      height: calc((100% - 200px) / 6);
+      height: 214px; //calc((100% - 200px) / 6);
     }
   }
 
@@ -312,11 +315,11 @@
 
   img {
     max-width: 100%;
-    max-height: 272px;
+    // max-height: 272px;
 
-    @media (max-width: $slider-width) {
-      max-height: 136px;
-    }
+    // @media (max-width: $slider-width) {
+    //   max-height: 136px;
+    // }
   }
 
   p {

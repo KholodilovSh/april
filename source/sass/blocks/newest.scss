@@ -16,6 +16,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
+    max-width: 678px;
     margin-bottom: 76px;
 
     h2 {
@@ -42,6 +43,22 @@
   grid-template-columns: 19.7% 34% 41%;
   gap: 2.6%;
 
+  ul {
+    height: 414px;
+
+    @media (max-width: $tablet-width-only) {
+      height: 240px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      height: 362px;
+    }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    grid-template-columns: 133px 240px 274px;
+  }
+
   @media (max-width: $mobile-width-only) {
     grid-template-areas: "left center";
     grid-template-columns: 44.8% 50%;
@@ -51,16 +68,22 @@
 
 .newest__left {
   grid-area: left;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  img {
+    height: 100%;
+  }
 
   li:first-child {
-    margin-bottom: 27px;
+    margin-bottom: 23px;
 
     @media (max-width: $tablet-width-only) {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 11px;
+      margin-bottom: 0;
     }
   }
 
@@ -69,16 +92,17 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    li {
-      margin-bottom: 11px;
+    grid-template-rows: 130px 87px 115px;
+    gap: 15px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     li:last-child {
       display: block;
-
-      img {
-        width: 100%;
-      }
     }
   }
 }
@@ -86,25 +110,35 @@
 .newest__center {
   grid-area: center;
 
+  li,
+  img {
+    height: 100%;
+
+    @media (max-width: $mobile-width-only) {
+      height: 226px;
+    }
+  }
+
   &--hide {
     display: none;
 
     @media (max-width: $mobile-width-only) {
       display: block;
-      margin-top: 11px;
+      margin-top: 15px;
 
       img {
+        height: 121px;
         width: 100%;
       }
     }
   }
+
+
 }
 
 .newest__right {
   grid-area: right;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
   height: 35.4%;
 
   @media (max-width: $mobile-width-only) {
@@ -113,27 +147,34 @@
 }
 
 .newest__top {
-  align-self: flex-start;
-
   &--left {
     width: 48.3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
   }
 
   &--right {
     width: 45.4%;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
 .newest__bottom {
-  align-self: flex-end;
-
   &--left {
-    position: relative;
-    left: 3px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
     width: 45.4%;
   }
 
   &--right {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
     width: 48.3%;
   }
 }

@@ -18,18 +18,20 @@
 <body>
   <header class="main-header main-header--opened">
     <h1 class="visually-hidden">Jewellery</h1>
-    <div class="main-header__wrap container container--air">
+    <div class="main-header__wrap container container--header">
       <button class="main-header__button main-header__button--opened" type="button">
       </button>
-      <div class="main-header__seek">
-        <svg width="20" height="18" viewBox="0 0 20 18">
-          <use xlink:href="img/sprite_auto.svg#icon-seek"></use>
-        </svg>
+      <form class="main-header__seek" action="https://echo.htmlacademy.ru/courses" method="post">
+        <button type="submit">
+          <svg width="20" height="18" viewBox="0 0 20 18">
+            <use xlink:href="img/sprite_auto.svg#icon-seek"></use>
+          </svg>
+        </button>
         <label for="seek" class="visually-hidden">строка поиска</label>
-        <input type="text" name="seek" id="seek" placeholder="Type here to search">
-      </div>
+        <input type="seach" name="seek" id="seek" placeholder="Type here to search" required>
+      </form>
       <a href="index.html">
-        <svg  class="main-header__logo" width="66" height="66" viewBox="0 0 66 66">
+        <svg class="main-header__logo" width="66" height="66" viewBox="0 0 66 66">
           <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
         </svg>
       </a>
@@ -46,13 +48,16 @@
     </div>
     <nav class="main-header__navigation">
       <div class="container container--air">
-        <div class="main-header__seek main-header__seek--tablet">
-          <svg width="20" height="18" viewBox="0 0 20 18">
-            <use xlink:href="img/sprite_auto.svg#icon-seek"></use>
-          </svg>
+        <form class="main-header__seek main-header__seek--tablet" action="https://echo.htmlacademy.ru/courses"
+          method="post">
+          <button type="submit">
+            <svg width="20" height="18" viewBox="0 0 20 18">
+              <use xlink:href="img/sprite_auto.svg#icon-seek"></use>
+            </svg>
+          </button>
           <label for="seek-tablet" class="visually-hidden">строка поиска</label>
-          <input type="text" name="seek" id="seek-tablet">
-        </div>
+          <input type="text" name="seek" id="seek-tablet" required>
+        </form>
         <ul>
           <li><a href="catalog.html">What’s new</a></li>
           <li><a href="catalog.html">Chokers</a></li>
@@ -178,7 +183,7 @@
 
     <section class="image-slider image-slider--card swiper-container container container--air">
       <h2>You May Also Like</h2>
-      <h3>Shop Now</h3>
+      <h3><a href="#">Shop Now</a></h3>
       <button class="image-slider__previous">
         <img src="img/prev.svg" alt="вернуться" width="29" height="9">
       </button>
@@ -201,8 +206,9 @@
               <source type="image/webp"
                 srcset="img/purple-gemstone-necklace-mobile@1x.webp 1x, img/purple-gemstone-necklace-mobile@2x.webp 2x">
               <!-- 1х: 130px; 2x: 260px -->
-              <img src="img/purple-gemstone-necklace-mobile@1x.jpg" srcset="img/purple-gemstone-necklace-mobile@2x.jpg 2x"
-                width="270" height="284" alt="Ожерелье с аметистом">
+              <img src="img/purple-gemstone-necklace-mobile@1x.jpg"
+                srcset="img/purple-gemstone-necklace-mobile@2x.jpg 2x" width="270" height="284"
+                alt="Ожерелье с аметистом">
             </picture>
             <p>Necklace with amethyst</p>
             <h4>$ 145</h4>
@@ -281,8 +287,8 @@
               <source type="image/webp"
                 srcset="img/elephant-earrings-mobile@1x.webp 1x, img/elephant-earrings-mobile@2x.webp 2x">
               <!-- 1х: 130px; 2x: 260px -->
-              <img src="img/elephant-earrings-mobile@1x.jpg" srcset="img/elephant-earrings-mobile@2x.jpg 2x"
-                width="270" height="272" alt="Серьги со слониками">
+              <img src="img/elephant-earrings-mobile@1x.jpg" srcset="img/elephant-earrings-mobile@2x.jpg 2x" width="270"
+                height="272" alt="Серьги со слониками">
             </picture>
             <p>Elephant earrings</p>
             <h4>$ 95</h4>
@@ -302,8 +308,7 @@
                 srcset="img/threader-necklace-closeup-mobile@1x.webp 1x, img/threader-necklace-closeup-mobile@2x.webp 2x">
               <!-- 1х: 130px; 2x: 260px -->
               <img src="img/threader-necklace-closeup-mobile@1x.jpg"
-                srcset="img/threader-necklace-closeup-mobile@2x.jpg 2x" width="270" height="272"
-                alt="Ожерелье простое">
+                srcset="img/threader-necklace-closeup-mobile@2x.jpg 2x" width="270" height="272" alt="Ожерелье простое">
             </picture>
             <p>Threader necklace</p>
             <h4>$ 115</h4>
@@ -450,11 +455,11 @@
           <h3>The good stuff in your inbox</h3>
           <h4>News and updates from CH. No spam, we promise.</h4>
         </div>
-        <div class="footer__email-wrapper">
+        <form class="footer__email-wrapper" action="https://echo.htmlacademy.ru/courses" method="post">
           <label for="your-email" class="visually-hidden">строка поиска</label>
-          <input type="text" name="email" id="your-email" placeholder="Your E-mail">
-          <p>Sign Up</p>
-        </div>
+          <input type="email" name="email" id="your-email" placeholder="Your E-mail" required>
+          <button type="submit">Sign Up</button>
+        </form>
       </div>
       <div class="footer__other footer__other--main">
         <ul>
@@ -560,7 +565,8 @@
         height="138" alt="Королевские подвески">
     </picture>
     <h1>Log In</h1>
-    <form class="login__form" action="https://echo.htmlacademy.ru/courses" method="post">
+    <form class="login__form container--air container--popap" action="https://echo.htmlacademy.ru/courses"
+      method="post">
       <div class="login__email">
         <label class="visually-hidden">ваш email</label>
         <input type="email" name="login-email" id="email" placeholder="Your E-mail" required>
@@ -569,17 +575,17 @@
         <label class="visually-hidden">пароль</label>
         <input type="password" name="login-password" id="password" placeholder="Password" required>
       </div>
-      <p>Forgot your password?</p>
+      <p><a href="#">Forgot your password?</a></p>
 
       <button class="login__submit button" type="submit">Log In</button>
       <div class="login__no-account">
-        <p>Don’t have an account? <span>Sign up</span></p>
+        <p>Don’t have an account? <a href="#">Sign up</a></p>
       </div>
       <button class="login__close" type="reset" aria-label="закрыть"></button>
     </form>
   </section>
   <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/mmain.js"></script>
 </body>
 
 </html>

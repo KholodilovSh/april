@@ -41,3 +41,7 @@ img {
 *::after {
   box-sizing: border-box;
 }
+
+.disable-scroll {
+  display: none;
+}

@@ -236,7 +236,11 @@
     display: flex;
 
     li {
-      margin-right: 30px;
+      margin-right: 34px;
+    }
+
+    li:first-child {
+      margin-right: 26px;
     }
   }
 

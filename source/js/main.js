@@ -10,18 +10,20 @@
   const cart = document.querySelector('.cart');
   const faqQuestions = document.querySelector('.faq__questions');
   const faqQuestionArray = document.querySelectorAll('.faq__question');
+  const galleryShowFilter = document.querySelector('.gallery__show-filter');
+  const galleryFilterModal = document.querySelector('.gallery--js');
   const galleryFilter = document.querySelector('.gallery__filter');
   const galleryItems = document.querySelectorAll('.gallery__item');
-  const filterButton = document.querySelector('.gallery__show-filter');
-  const filterShow = document.querySelector('.gallery--js');
   const menuButton = document.querySelector('.main-header__button');
   const menuNavigation = document.querySelector('.main-header__navigation');
   const promo = document.querySelector('.promo');
   const card = document.querySelector('.card');
+  const main = document.querySelector('.main');
+  const footer = document.querySelector('.footer');
 
   let onClickMainHeaderLogin;
+  let onClickGalleryShowFilter;
   let onClickCardButton;
-  let onClickFilterButton;
 
   new window.Swiper('.image-slider', {
 
@@ -37,6 +39,19 @@
       nextEl: '.image-slider__next',
       prevEl: '.image-slider__previous',
     },
+
+    // отключаем предзагрузку
+    preloadImages: false,
+    lazy: {
+      // подгружать на старте переключения файла
+      loadOnTransitionStart: false,
+      // грузить соседние
+      loadPrevNext: false,
+    },
+    // если slidesPerView = auto или > 1 можно включать следующее
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+
 
     // Responsive breakpoints
     breakpoints: {
@@ -145,9 +160,13 @@
       if (openMenu) {
         menuNavigation.classList.remove('main-header__navigation--closed');
         menuButton.classList.add('main-header__button--opened');
+        main.classList.add('disable-scroll');
+        footer.classList.add('disable-scroll');
       } else {
         menuNavigation.classList.add('main-header__navigation--closed');
         menuButton.classList.remove('main-header__button--opened');
+        main.classList.remove('disable-scroll');
+        footer.classList.remove('disable-scroll');
       }
 
       if (mainHeader) {
@@ -319,7 +338,7 @@
     cardButton.addEventListener('click', onClickCardButton);
   }
 
-  if (filterButton && filterShow) {
+  if (galleryShowFilter && galleryFilterModal) {
 
     const onEscapeModalMenu = function (evt) {
       if (evt.key === 'Escape') {
@@ -336,30 +355,30 @@
     };
 
     const closeForm = function () {
-      filterShow.classList.remove('gallery--show');
+      galleryFilterModal.classList.remove('gallery--show');
       document.body.classList.remove('body--overflow-hidden');
       galleryClose.removeEventListener('click', onClickMenuClose);
-      filterShow.removeEventListener('click', onClickOverlay);
+      galleryFilterModal.removeEventListener('click', onClickOverlay);
 
       if (overlay) {
         overlay.classList.remove('overlay--show');
         overlay.removeEventListener('click', onClickOverlay);
       }
 
-      filterButton.addEventListener('click', onClickFilterButton);
+      galleryShowFilter.addEventListener('click', onClickGalleryShowFilter);
     };
 
-    const galleryClose = filterShow.querySelector('.gallery__close');
+    const galleryClose = galleryFilterModal.querySelector('.gallery__close');
 
-    onClickFilterButton = function (evtClick) {
+    onClickGalleryShowFilter = function (evtClick) {
 
       if (evtClick) {
         evtClick.preventDefault();
       }
 
-      filterButton.removeEventListener('click', onClickFilterButton);
+      galleryShowFilter.removeEventListener('click', onClickGalleryShowFilter);
 
-      filterShow.classList.add('gallery--show');
+      galleryFilterModal.classList.add('gallery--show');
       document.body.classList.add('body--overflow-hidden');
 
       galleryClose.addEventListener('click', onClickMenuClose);
@@ -371,9 +390,8 @@
       }
     };
 
-    filterButton.addEventListener('click', onClickFilterButton);
+    galleryShowFilter.addEventListener('click', onClickGalleryShowFilter);
   }
-
 
   if (faqQuestions && faqQuestionArray) {
     for (let i = 0; i < faqQuestionArray.length; i++) {
@@ -424,6 +442,10 @@
     };
 
     galleryFilter.addEventListener('click', onClickGalleryFilter);
+
+    if (galleryFilterModal) {
+      galleryFilterModal.addEventListener('click', onClickGalleryFilter);
+    }
 
   }
 })();

@@ -386,7 +386,7 @@
   }
 }
 
-.gallery--show {
+.gallery__item--show {
   display: block;
   width: 330px;
   height: 550px;
@@ -401,4 +401,12 @@
     border: none;
     border-bottom: 1px solid $menu-background;
   }
+}
+
+.gallery--show {
+  display: block;
+  max-width: 430px;
+  height: 605px;
+  box-shadow: 0 4px 30px $black;
+  background-color: $main-ground;
 }

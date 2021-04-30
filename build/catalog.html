@@ -73,7 +73,7 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main class="main">
     <section class="promo promo--all-jellery promo--menu">
       <h2>ALL JEWELLERY</h2>
       <h3>Discover picks of fashion's finest trends in our jewellery catalog</h3>
@@ -85,7 +85,7 @@
         <form class="gallery__filter" action="https://echo.htmlacademy.ru/courses" method="post">
           <ul>
             <li class="gallery__item">
-              <h4>Product</h4>
+              <h4 tabindex="0">Product</h4>
               <div id="product-list" class="gallery__filter-item">
                 <input type="checkbox" name="products" value="necklaces" id="filter-necklaces" class="visually-hidden" checked="">
                 <label for="filter-necklaces">Necklaces</label>
@@ -101,7 +101,7 @@
               </div>
             </li>
             <li class="gallery__item">
-              <h4>Material</h4>
+              <h4 tabindex="0">Material</h4>
               <div id="material-list" class="gallery__filter-item">
                 <input type="checkbox" name="materials" value="gold" id="filter-gold" class="visually-hidden" checked="">
                 <label for="filter-gold">Gold</label>
@@ -111,7 +111,7 @@
               </div>
             </li>
             <li class="gallery__item">
-              <h4>Collection</h4>
+              <h4 tabindex="0">Collection</h4>
               <div id="collection-list" class="gallery__filter-item">
                 <input type="checkbox" name="collections" value="pink-flamingo" id="filter-pink-flamingo" class="visually-hidden" checked="">
                 <label for="filter-pink-flamingo">Pink flamingo</label>
@@ -121,7 +121,7 @@
               </div>
             </li>
             <li class="gallery__item">
-              <h4>Price</h4>
+              <h4 tabindex="0">Price</h4>
               <div class="gallery__filter-item gallery__filter-item--ranger">
                 <p class="gallery__price gallery__price--low">$ 55</p>
                 <p class="gallery__price gallery__price--high">$ 155</p>
@@ -1162,9 +1162,7 @@
           </div>
         </div>
       </div>
-
     </section>
-
   </main>
   <footer class="footer">
     <div class="footer__wrapper container container--air">
@@ -1258,6 +1256,58 @@
       </div>
       <button class="login__close" type="reset" aria-label="закрыть"></button>
     </form>
+  </section>
+  <section class="gallery gallery--js">
+    <form class="gallery__filter gallery__filter--no-js" action="https://echo.htmlacademy.ru/courses" method="post">
+      <ul>
+        <li class="gallery__item">
+          <h4 tabindex="0">Product</h4>
+          <div id="product-list" class="gallery__filter-item">
+            <input type="checkbox" name="products" value="necklaces" id="filter-js-necklaces" class="visually-hidden" checked="">
+            <label for="filter-js-necklaces">Necklaces</label>
+
+            <input type="checkbox" name="products" value="chokers" id="filter-js-chokers" class="visually-hidden" checked="">
+            <label for="filter-js-chokers">Chokers</label>
+
+            <input type="checkbox" name="products" value="rings" id="filter-js-rings" class="visually-hidden">
+            <label for="filter-js-rings">Rings</label>
+
+            <input type="checkbox" name="products" value="earrings" id="filter-js-earrings" class="visually-hidden" checked="">
+            <label for="filter-js-earrings">Earrings</label>
+          </div>
+        </li>
+        <li class="gallery__item">
+          <h4 tabindex="0">Material</h4>
+          <div id="material-list" class="gallery__filter-item">
+            <input type="checkbox" name="materials" value="gold" id="filter-js-gold" class="visually-hidden" checked="">
+            <label for="filter-js-gold">Gold</label>
+
+            <input type="checkbox" name="materials" value="silver" id="filter-js-silver" class="visually-hidden" checked="">
+            <label for="filter-js-silver">Silver</label>
+          </div>
+        </li>
+        <li class="gallery__item">
+          <h4 tabindex="0">Collection</h4>
+          <div id="collection-list" class="gallery__filter-item">
+            <input type="checkbox" name="collections" value="pink-flamingo" id="filter-js-pink-flamingo" class="visually-hidden" checked="">
+            <label for="filter-js-pink-flamingo">Pink flamingo</label>
+
+            <input type="checkbox" name="collections" value="dreams" id="filter-js-dreams" class="visually-hidden" checked="">
+            <label for="filter-js-dreams">Dreams</label>
+          </div>
+        </li>
+        <li class="gallery__item">
+          <h4 tabindex="0">Price</h4>
+          <div class="gallery__filter-item gallery__filter-item--ranger">
+            <p class="gallery__price gallery__price--low">$ 55</p>
+            <p class="gallery__price gallery__price--high">$ 155</p>
+          </div>
+        </li>
+      </ul>
+      <button class="gallery__filter-submit button" type="submit">Apply</button>
+      <button class="gallery__filter-reset button" type="reset">Clear All</button>
+    </form>
+    <a class="gallery__close" aria-label="закрыть"></a>
   </section>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

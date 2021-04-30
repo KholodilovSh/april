@@ -38,8 +38,6 @@
 
 .faq__question {
   position: relative;
-  padding-top: 44px;
-  padding-bottom: 43px;
   border: 1px solid $under-line;
   margin-top: -1px;
 
@@ -50,40 +48,41 @@
   }
 
   h4 {
-    margin-left: 43px;
+    padding-top: 44px;
+    padding-bottom: 43px;
+    padding-left: 43px;
+    padding-right: 43px;
     font-weight: 500;
     font-size: 18px;
     line-height: 130%;
 
     @media (max-width: $tablet-width-only) {
-      margin-left: 50px;
+      padding-left: 50px;
+      padding-bottom: 45px;
       margin-bottom: -1px;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-left: 23px;
-      width: 207px;
+      padding-left: 23px;
+      padding-top: 18px;
+      padding-bottom: 20px;
+      width: 100%;
       font-size: 16px;
       line-height: 140%;
+
+      &::after {
+        top: 30px;
+        right: 20px;
+      }
     }
   }
 
   @include close-open(50px, 49px);
 
-  @media (max-width: $tablet-width-only) {
-    padding-bottom: 45px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    h4::after {
-      top: 30px;
-      right: 20px;
-    }
-  }
-
   p {
     margin-left: 50px;
-    margin-top: 9px;
+    margin-top: -34px;
+    margin-bottom: 43px;
     max-width: 525px;
     font-weight: 400;
     font-size: 16px;
@@ -91,22 +90,17 @@
     letter-spacing: 0.01em;
 
     @media (max-width: $tablet-width-only) {
-      margin-top: 26px;
+      margin-top: -19px;
       max-width: 537px;
       letter-spacing: 0.01em;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-top: 15px;
+      margin-top: -15px;
       margin-left: 23px;
       margin-right: 55px;
       font-size: 14px;
       line-height: 143%;
     }
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding-top: 18px;
-    padding-bottom: 20px;
   }
 }

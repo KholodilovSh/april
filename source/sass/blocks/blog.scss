@@ -51,16 +51,18 @@
 
 .blog__article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "image description";
+
 
   &--left {
     grid-area: left;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "description image";
   }
 
   &--right {
     grid-area: right;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image description";
   }
 
   &--corner {
@@ -70,6 +72,7 @@
 
     @media (max-width: $tablet-width-only) {
       grid-template-columns: 1fr 1fr;
+      grid-template-areas: "image description";
     }
 
     .blog__description {
@@ -77,6 +80,7 @@
       width: 285px;
       right: 0;
       bottom: 0;
+      grid-area: description;
 
       h3 {
         margin-bottom: 107px;

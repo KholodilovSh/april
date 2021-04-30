@@ -383,13 +383,17 @@
     const onClickFaqQuestion = function (event) {
 
       const question = event.target.parentElement;
+      const liClosed = question.classList.contains('faq__question--closed');
+      const liOpened = question.classList.contains('faq__question--opened');
 
-      if (!question.classList.contains('faq__question--closed')) {
-        question.classList.add('faq__question--closed');
-        question.classList.remove('faq__question--opened');
-      } else {
-        question.classList.remove('faq__question--closed');
-        question.classList.add('faq__question--opened');
+      if (liOpened || liClosed) {
+        if (!liClosed) {
+          question.classList.add('faq__question--closed');
+          question.classList.remove('faq__question--opened');
+        } else {
+          question.classList.remove('faq__question--closed');
+          question.classList.add('faq__question--opened');
+        }
       }
     };
 
@@ -405,13 +409,17 @@
     const onClickGalleryFilter = function (event) {
 
       const filter = event.target.parentElement;
+      const liClosed = filter.classList.contains('gallery__item--closed');
+      const liOpened = filter.classList.contains('gallery__item--opened');
 
-      if (!filter.classList.contains('gallery__item--closed')) {
-        filter.classList.add('gallery__item--closed');
-        filter.classList.remove('gallery__item--opened');
-      } else {
-        filter.classList.remove('gallery__item--closed');
-        filter.classList.add('gallery__item--opened');
+      if (liClosed || liOpened) {
+        if (!liClosed) {
+          filter.classList.add('gallery__item--closed');
+          filter.classList.remove('gallery__item--opened');
+        } else {
+          filter.classList.remove('gallery__item--closed');
+          filter.classList.add('gallery__item--opened');
+        }
       }
     };
 

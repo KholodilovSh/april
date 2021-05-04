@@ -45,7 +45,8 @@
     }
   }
 
-  &--popap {
+  &--popup {
+    position: static;
     max-width: 430px;
     width: 96%;
   }

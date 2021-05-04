@@ -50,7 +50,7 @@
 
   @media (max-width: $tablet-width-only) {
     grid-template-areas: "big" "small";
-    grid-template-columns: 1fr;
+    grid-template-columns: 319px;
     grid-template-rows: 286px 129px;
     gap: 14px;
     width: 47%;

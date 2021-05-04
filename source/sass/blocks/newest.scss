@@ -136,42 +136,61 @@
 
 .newest__right {
   grid-area: right;
-  position: relative;
-  height: 35.4%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  @media (max-width: $tablet-width-only) {
+    gap: 10px;
+  }
 
   @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
 
-.newest__top {
-  &--left {
-    width: 48.3%;
-    position: absolute;
-    top: 0;
-    left: 0;
+.newest__right-left,
+.newest__right-right {
+  display: grid;
+  gap: 30px;
+
+  @media (max-width: $tablet-width-only) {
+    gap: 18px;
   }
 
-  &--right {
-    width: 45.4%;
-    position: absolute;
-    top: 0;
-    right: 0;
+  img {
+    height: 100%;
   }
 }
 
-.newest__bottom {
-  &--left {
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 45.4%;
+.newest__right-left {
+  grid-template-rows: 193px 191px;
+
+  &--bottom {
+    margin-right: 14px;
   }
 
-  &--right {
-    position: absolute;
-    bottom: -4px;
-    right: 0;
-    width: 48.3%;
+  @media (max-width: $tablet-width-only) {
+    grid-template-rows: 111px 111px;
+
+    &--bottom {
+      margin-right: 8px;
+    }
+  }
+}
+
+.newest__right-right {
+  grid-template-rows: 218px 166px;
+
+  &--top {
+    margin-left: 14px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    grid-template-rows: 126px 96px;
+
+    &--top {
+      margin-left: 8px;
+    }
   }
 }

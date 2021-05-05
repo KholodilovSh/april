@@ -19,7 +19,9 @@
     color: $letter;
 
     @media (max-width: $mobile-width-only) {
-      margin: 45px 22px 40px 22px;
+      margin: 37px 25px 30px 25px;
+      font-size: 24px;
+      line-height: 122%;
     }
   }
 }
@@ -65,7 +67,7 @@
 
   @media (max-width: $mobile-width-only) {
     grid-template-columns: 85px 1fr 14px;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 
   img {
@@ -83,7 +85,7 @@
     line-height: 130%;
 
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 15px;
+      margin-bottom: 8px;
       font-size: 16px;
     }
   }
@@ -162,10 +164,11 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 0;
+    margin-top: 3px;
 
     p {
       margin-top: 6px;
+      margin-bottom: 10px;
       font-size: 16px;
     }
   }
@@ -175,28 +178,35 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-  font-family: "Poppins", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 130%;
-  color: $letter;
 
+  p,
   h3 {
     margin: 0;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 130%;
+    color: $letter;
+  }
+
+  h3 {
     font-weight: 400;
-    color: $grey-letter;
   }
 
   p {
-    margin: 0;
+    font-weight: 500;
   }
 
   @media (max-width: $mobile-width-only) {
     display: block;
     margin-bottom: 35px;
-    font-size: 12px;
+
+    p,
+    h3 {
+      font-size: 12px;
+    }
 
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
   }
 }
@@ -253,6 +263,10 @@
   &::after {
     content: "Checkout";
     width: 78px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 45px;
   }
 }
 

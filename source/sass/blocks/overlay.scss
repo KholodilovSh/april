@@ -9,4 +9,8 @@
   &--show {
     display: block;
   }
+
+  &--card {
+    background-color: $overlay-card;
+  }
 }

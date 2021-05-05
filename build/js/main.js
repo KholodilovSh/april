@@ -441,6 +441,29 @@
       }
     };
 
+    const onKeyGalleryFilter = function (evt) {
+
+      if (evt.key === 'Enter' || evt.code === 'Space') {
+        const filter = evt.target.parentElement;
+        const liClosed = filter.classList.contains('gallery__item--closed');
+        const liOpened = filter.classList.contains('gallery__item--opened');
+
+        if (liClosed || liOpened) {
+
+          evt.preventDefault();
+          // Space вызывает скролл до якоря
+          if (!liClosed) {
+            filter.classList.add('gallery__item--closed');
+            filter.classList.remove('gallery__item--opened');
+          } else {
+            filter.classList.remove('gallery__item--closed');
+            filter.classList.add('gallery__item--opened');
+          }
+        }
+      }
+    };
+
+    document.addEventListener('keydown', onKeyGalleryFilter);
     galleryFilter.addEventListener('click', onClickGalleryFilter);
 
     if (galleryFilterModal) {

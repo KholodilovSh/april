@@ -77,10 +77,10 @@
   }
 }
 
-@mixin close-button ($width: 23px, $color: $letter) {
+@mixin close-button ($width: 23px, $top: 20px, $right: 26px, $color: $letter) {
   position: absolute;
-  top: 20px;
-  right: 26px;
+  top: $top;
+  right: $right;
   width: 33px;
   height: 33px;
   background-color: transparent;

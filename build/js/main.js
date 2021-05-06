@@ -15,10 +15,10 @@
   const galleryFilter = document.querySelector('.gallery__filter');
   const galleryItems = document.querySelectorAll('.gallery__item');
   const menuButton = document.querySelector('.main-header__button');
-  const menuNavigation = document.querySelector('.main-header__navigation');
+  const menuNavigation = document.querySelector('.main-navigation');
   const promo = document.querySelector('.promo');
   const card = document.querySelector('.card');
-  const main = document.querySelector('.main');
+  const divJS = document.querySelector('.scroll-js');
   const footer = document.querySelector('.footer');
 
   let onClickMainHeaderLogin;
@@ -143,7 +143,7 @@
   }
 
   if (menuButton && menuNavigation) {
-    menuNavigation.classList.add('main-header__navigation--closed');
+    menuNavigation.classList.add('main-navigation--closed');
 
     if (promo) {
       promo.classList.remove('promo--menu');
@@ -155,17 +155,17 @@
 
     const onClickMenuButton = function () {
 
-      const openMenu = menuNavigation.classList.contains('main-header__navigation--closed');
+      const openMenu = menuNavigation.classList.contains('main-navigation--closed');
 
       if (openMenu) {
-        menuNavigation.classList.remove('main-header__navigation--closed');
+        menuNavigation.classList.remove('main-navigation--closed');
         menuButton.classList.add('main-header__button--opened');
-        main.classList.add('disable-scroll');
+        divJS.classList.add('disable-scroll');
         footer.classList.add('disable-scroll');
       } else {
-        menuNavigation.classList.add('main-header__navigation--closed');
+        menuNavigation.classList.add('main-navigation--closed');
         menuButton.classList.remove('main-header__button--opened');
-        main.classList.remove('disable-scroll');
+        divJS.classList.remove('disable-scroll');
         footer.classList.remove('disable-scroll');
       }
 
@@ -441,6 +441,29 @@
       }
     };
 
+    const onKeyGalleryFilter = function (evt) {
+
+      if (evt.key === 'Enter' || evt.code === 'Space') {
+        const filter = evt.target.parentElement;
+        const liClosed = filter.classList.contains('gallery__item--closed');
+        const liOpened = filter.classList.contains('gallery__item--opened');
+
+        if (liClosed || liOpened) {
+
+          evt.preventDefault();
+          // Space вызывает скролл до якоря
+          if (!liClosed) {
+            filter.classList.add('gallery__item--closed');
+            filter.classList.remove('gallery__item--opened');
+          } else {
+            filter.classList.remove('gallery__item--closed');
+            filter.classList.add('gallery__item--opened');
+          }
+        }
+      }
+    };
+
+    document.addEventListener('keydown', onKeyGalleryFilter);
     galleryFilter.addEventListener('click', onClickGalleryFilter);
 
     if (galleryFilterModal) {

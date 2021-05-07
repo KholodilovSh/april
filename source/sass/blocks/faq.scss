@@ -22,7 +22,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-bottom: 69px;
+    margin-bottom: 73px;
     max-width: 678px;
   }
 
@@ -96,9 +96,10 @@
     }
 
     @media (max-width: $mobile-width-only) {
-      margin-top: -15px;
+      margin-top: -8px;
       margin-left: 23px;
       margin-right: 55px;
+      margin-bottom: 19px;
       font-size: 14px;
       line-height: 143%;
     }

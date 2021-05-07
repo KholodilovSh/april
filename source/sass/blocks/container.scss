@@ -43,6 +43,10 @@
     @media (max-width: 770px) {
       max-width: 670px;
     }
+
+    @media (max-width: $mobile-width-only) {
+      width: 90%;
+    }
   }
 
   &--popup {

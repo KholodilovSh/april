@@ -57,7 +57,8 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    display: block;
+    display: none;
+    // display: block;
     margin-bottom: 45px;
     width: 100%;
 
@@ -290,6 +291,34 @@
 
     li {
       width: 19%;
+    }
+  }
+}
+
+.card-slider {
+  display: none;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    margin-bottom: 45px;
+    height: 260px;
+    width: 90%;
+
+    img {
+      width: 100%;
+    }
+
+    .swiper-slide {
+
+      height: 260px;
+    }
+
+    .card-pagination {
+      margin-bottom: -5px;
+      font-family: "Poppins", "Arial", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
     }
   }
 }

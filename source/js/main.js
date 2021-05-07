@@ -85,6 +85,40 @@
     }
   });
 
+  new window.Swiper('.card-slider', {
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+
+      renderFraction: function (currentClass, totalClass) {
+        return '<span class="' + currentClass + '"></span>' +
+        ' of ' +
+        '<span class="' + totalClass + '"></span>';
+      }
+    },
+
+    slidesPerView: 1,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    // navigation: {
+    //   nextEl: '.image-slider__next',
+    //   prevEl: '.image-slider__previous',
+    // },
+
+    // отключаем предзагрузку
+    preloadImages: false,
+    lazy: {
+      // подгружать на старте переключения файла
+      loadOnTransitionStart: false,
+      // грузить соседние
+      loadPrevNext: false,
+    },
+    // если slidesPerView = auto или > 1 можно включать следующее
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+  });
+
   new window.Swiper('.gallery__slider', {
 
     pagination: {

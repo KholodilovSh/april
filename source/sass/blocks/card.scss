@@ -87,7 +87,32 @@
 }
 
 .card__big {
+  position: relative;;
   grid-area: big;
+
+  @media (max-width: $mobile-width-only) {
+    img {
+      height: 260px;
+    }
+  }
+
+  p {
+    display: none;
+
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      display: block;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: "Poppins", "Arial", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      text-align: center;
+      color: $letter;
+    }
+  }
 }
 
 .card__description {
@@ -160,7 +185,7 @@
   }
 
   table {
-    margin-top: 19px;
+    margin-top: 23px;
     margin-bottom: 54px;
     margin-left: 2px;
     width: 100%;

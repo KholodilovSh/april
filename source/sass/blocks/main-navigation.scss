@@ -13,6 +13,10 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+
+    @media (max-width: $tablet-width-only) {
+      margin-left: 0;
+    }
   }
 
   li {
@@ -29,6 +33,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
+    padding-top: 21px;
     color: $white;
     background-color: $menu-background;
     border: none;
@@ -39,15 +44,24 @@
 
     ul {
       display: block;
-      padding: 55px 0 0 0;
+      padding: 47px 0 0 0;
       width: auto;
       font-weight: 500;
       font-size: 24px;
       line-height: 36px;
 
       li {
-        margin-bottom: 40px;
+        margin-bottom: 21px;
       }
+
+      @media (max-width: $mobile-width-only) {
+        padding-top: 36px;
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin-top: 100px;
+      padding-top: 2px;
     }
   }
 
@@ -63,13 +77,22 @@
       color: $menu-letter;
 
       li {
-        margin-bottom: 30px;
+        margin-bottom: 21px;
       }
 
       & li:last-child {
-        margin-top: 55px;
+        margin-top: 47px;
         color: $white;
+
+        @media (max-width: $mobile-width-only) {
+          margin-top: 33px;
+        }
       }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 9px;
+      padding-bottom: 25px;
     }
   }
 }

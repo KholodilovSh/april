@@ -51,7 +51,7 @@
     }
 
     @media (max-width: $mobile-width-only) {
-      height: 362px;
+      height: auto;
     }
   }
 
@@ -92,11 +92,12 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    grid-template-rows: 130px 87px 115px;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     img {
-      height: 100%;
+      height: auto;
       width: 100%;
       object-fit: cover;
     }
@@ -115,7 +116,7 @@
     height: 100%;
 
     @media (max-width: $mobile-width-only) {
-      height: 226px;
+      height: auto;
     }
   }
 
@@ -127,7 +128,7 @@
       margin-top: 15px;
 
       img {
-        height: 121px;
+        height: auto;
         width: 100%;
       }
     }

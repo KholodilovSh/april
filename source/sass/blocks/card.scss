@@ -305,11 +305,12 @@
     width: 90%;
 
     img {
-      width: 100%;
+      margin-left: calc((100% - 290px) / 2);
+      margin-right: calc((100% - 290px) / 2);
+      width: 290px;
     }
 
     .swiper-slide {
-
       height: 260px;
     }
 

@@ -449,6 +449,29 @@
       }
     };
 
+    const onKeyFaqQuestion = function (evt) {
+
+      if (evt.key === 'Enter' || evt.code === 'Space') {
+        const question = event.target.parentElement;
+        const liClosed = question.classList.contains('faq__question--closed');
+        const liOpened = question.classList.contains('faq__question--opened');
+
+        if (liClosed || liOpened) {
+
+          evt.preventDefault();
+          // Space вызывает скролл до якоря
+          if (!liClosed) {
+            question.classList.add('faq__question--closed');
+            question.classList.remove('faq__question--opened');
+          } else {
+            question.classList.remove('faq__question--closed');
+            question.classList.add('faq__question--opened');
+          }
+        }
+      }
+    };
+
+    document.addEventListener('keydown', onKeyFaqQuestion);
     faqQuestions.addEventListener('click', onClickFaqQuestion);
 
   }

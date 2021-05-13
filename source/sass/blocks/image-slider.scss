@@ -96,15 +96,6 @@
 
   img {
     width: 100%;
-    height: 284px;
-
-    @media (max-width: $tablet-width-only) {
-      height: 340px;
-    }
-
-    @media (max-width: $mobile-width-only) {
-      height: 136px;
-    }
   }
 
   p {

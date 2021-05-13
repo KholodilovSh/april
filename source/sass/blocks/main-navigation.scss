@@ -58,11 +58,12 @@
         padding-top: 36px;
       }
     }
+  }
 
-    @media (max-width: $mobile-width-only) {
-      margin-top: 100px;
-      padding-top: 2px;
-    }
+  @media (max-width: $mobile-width-only) {
+    margin-top: 100px;
+    padding-top: 2px;
+    height: 100vh;
   }
 
   .main-navigation__pad-menu {
